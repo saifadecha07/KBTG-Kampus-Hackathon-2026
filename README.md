@@ -29,14 +29,15 @@ First Jobbers ไทยจำนวนมากเงินเดือนหม
 
 | ไฟล์ | เนื้อหา |
 |---|---|
-| [`detail.md`](detail.md) | 📌 โจทย์และกติกาจาก KBTG — **ห้ามแก้ไข** |
-| [`kbtg_hackathon_2026.md`](kbtg_hackathon_2026.md) | แผนงาน · วิเคราะห์คู่แข่ง · ช่องโหว่และการตัดสินใจทั้งหมด |
-| [`design_usecase.md`](design_usecase.md) | Use case 12 ข้อ + flow + traceability สำหรับเขียนโค้ดและเทส |
-| [`BOARD.md`](BOARD.md) | สถานะงาน — เสร็จแล้ว / กำลังทำ / ยังไม่เริ่ม |
+| [`docs/01-brief/detail.md`](docs/01-brief/detail.md) | 📌 โจทย์และกติกาจาก KBTG — **ห้ามแก้ไข** |
+| [`docs/02-strategy/pace_strategy.md`](docs/02-strategy/pace_strategy.md) | แผนงาน · วิเคราะห์คู่แข่ง · ช่องโหว่และการตัดสินใจทั้งหมด |
+| [`docs/03-design/design_usecase.md`](docs/03-design/design_usecase.md) | Use case 12 ข้อ + flow + traceability สำหรับเขียนโค้ดและเทส |
+| [`docs/04-planning/BOARD.md`](docs/04-planning/BOARD.md) | สถานะงาน — เสร็จแล้ว / กำลังทำ / ยังไม่เริ่ม |
+| [`archive/CLUADE.md`](archive/CLUADE.md) | บันทึกบริบทเดิม เก็บไว้อ้างอิงเท่านั้น |
 
 ---
 
 ## สถานะ
 
 ช่วงออกแบบ — ปิดการตัดสินใจหลักครบแล้ว กำลังเตรียมเข้าสู่ช่วง implement
-ดูรายละเอียดที่ [`BOARD.md`](BOARD.md)
+ดูรายละเอียดที่ [`docs/04-planning/BOARD.md`](docs/04-planning/BOARD.md)

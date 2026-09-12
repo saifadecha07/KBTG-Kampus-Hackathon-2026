@@ -1,7 +1,7 @@
 # KBTG Kampus Hackathon 2026 — ไอเดีย "Pace"
 
-> กติกาหลักอยู่ที่ `detail.md` (ห้ามแก้ไฟล์นั้น) ไฟล์นี้คือแผนงาน/บันทึกคิดของทีม
-> **รายละเอียด use case + flow สำหรับเขียนโค้ด/เทส อยู่ที่ [`design_usecase.md`](design_usecase.md)**
+> กติกาหลักอยู่ที่ [`../01-brief/detail.md`](../01-brief/detail.md) (ห้ามแก้ไฟล์นั้น) ไฟล์นี้คือแผนงาน/บันทึกคิดของทีม
+> **รายละเอียด use case + flow สำหรับเขียนโค้ด/เทส อยู่ที่ [`../03-design/design_usecase.md`](../03-design/design_usecase.md)**
 
 ## Quick Facts
 
