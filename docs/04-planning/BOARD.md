@@ -53,6 +53,7 @@
 - [x] **แผน usability test เต็มรูปแบบ** — task T1–T5 · rubric · severity · เกณฑ์ตัดสิน continue/revise/pivot · **ต้อง pilot 1 คนก่อนรัน 5–8 คน**
 - [x] **กฎเงินพื้นฐาน M1–M12** — integer สตางค์ห้าม float · ปัดลงแล้วเศษเข้าบัญชีรายเดือน · เป้ารายวันปัดลงเป็นบาทเต็ม · **invariant ผลรวมต้องตรงเสมอ** · ห้ามกระเป๋าติดลบ · ledger 2 ขาเขียนอย่างเดียว · transaction เดียวต่อชุด · **ปิด L7** (UTC เก็บ / Asia/Bangkok แสดง / นับตามเวลา commit) · **แยก `reserved` ออกจาก `balance`** · server เป็นแหล่งความจริงเดียว
 - [x] **ไล่ตรวจทุก UC หาช่องโหว่ที่ยังไม่เคยลิสต์ — เจอ 49 ข้อ (G01–G49)** พร้อมข้อเสนอทุกข้อ
+- [x] **UC-14 กระเป๋าออมเพิ่มเติม** — 3 กระเป๋าแกนหลักตายตัว + ผู้ใช้สร้างกระเป๋า `goal` เพิ่มได้สูงสุด 10 ใบ (manual, ไม่เข้า auto-split/refill/cooldown, นับใน invariant M4 เสมอ) — reuse ความสามารถ K-ePocket ไม่สร้างกลไกใหม่ซ้ำ
 
 ---
 
@@ -79,7 +80,7 @@
 
 ### ต้องปิดก่อนเริ่มเขียนโค้ด (เหลือแค่นี้ — logic จบแล้ว เข้า architecture ได้)
 - [ ] **เลือก tech stack** — frontend / backend ตามที่ทีมถนัด ห้ามเรียนของใหม่ตอนแข่ง
-- [ ] **Data Model** — `Pocket` (balance + **`reserved`** ตาม M9 · หน่วยเป็นสตางค์ integer ตาม M1) · **`LedgerEntry`** (สองขา เขียนอย่างเดียว ตาม M6 · idempotency_key unique ตาม L10) · `WithdrawRequest` (ผูกยอดตายตัว ตาม L6/L8) · `SplitRule` · `DailyTargetConfig` · `OverspendLog` · **`Bill`** (ผู้รับ · รอบ · แบบคงที่/ผันผวน · ยอดที่กัน · วันประจำ · สถานะ · แหล่งที่มา: ระบบเจอเอง/ผู้ใช้เพิ่ม) · **`SenderRule`** (auto-approve / เงินผ่านทาง)
+- [ ] **Data Model** — `Pocket` (balance + **`reserved`** ตาม M9 · หน่วยเป็นสตางค์ integer ตาม M1 · **type: main/monthly/daily/vault ตายตัว 3 ใบ + goal สร้างเพิ่มได้สูงสุด 10 ใบตาม UC-14**) · **`LedgerEntry`** (สองขา เขียนอย่างเดียว ตาม M6 · idempotency_key unique ตาม L10) · `WithdrawRequest` (ผูกยอดตายตัว ตาม L6/L8) · `SplitRule` · `DailyTargetConfig` · `OverspendLog` · **`Bill`** (ผู้รับ · รอบ · แบบคงที่/ผันผวน · ยอดที่กัน · วันประจำ · สถานะ · แหล่งที่มา: ระบบเจอเอง/ผู้ใช้เพิ่ม) · **`SenderRule`** (auto-approve / เงินผ่านทาง)
 - [ ] **API Contract** — mock เงินเข้า · ดูยอดกระเป๋า · mock ใช้จ่าย · ขอถอน · ยกเลิก · ยกเลิกการแบ่ง (L13) · สถิติ · **ดู/เพิ่ม/แก้/ลบบิล**
 
 ### Implement
