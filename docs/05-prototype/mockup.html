@@ -414,21 +414,34 @@
         btn.textContent = 'ปล่อยเงินแล้ว';
         btn.dataset.state = 'done';
         document.getElementById('vaultAmt').textContent = '3,500.00 ฿';
-        growTree(0.55);
+        growTree(3500);
       } else {
         cd.textContent = '00:' + String(seconds).padStart(2,'0');
       }
     }, 1000);
   }
 
-  function growTree(scale){
+  // ระยะต้นไม้ตาม Decision R22 (decision_log.md) — ผูกกับยอดคงเหลือจริง ไม่ใช่ค่าตกแต่งลอยๆ
+  const TREE_TIERS = [
+    { max: 0,     label: 'ยังไม่ปลูก', scale: 0 },
+    { max: 999,   label: 'หว่านเมล็ด', scale: 0.28 },
+    { max: 4999,  label: 'ต้นกล้า',    scale: 0.5 },
+    { max: 14999, label: 'ต้นเล็ก',    scale: 0.7 },
+    { max: 29999, label: 'ต้นโต',      scale: 0.85 },
+    { max: 49999, label: 'ใกล้เต็มต้น', scale: 0.95 },
+    { max: Infinity, label: 'เต็มต้น / ป่าเล็ก', scale: 1.1 },
+  ];
+
+  function growTree(balance){
+    const tier = TREE_TIERS.find(t => balance <= t.max);
+    const scale = tier.scale;
     document.getElementById('leaf1').setAttribute('r', 26*scale + 8);
     document.getElementById('leaf2').setAttribute('r', 20*scale);
     document.getElementById('leaf3').setAttribute('r', 20*scale);
     document.getElementById('leaf4').setAttribute('r', 18*scale);
-    document.getElementById('vaultTier').textContent = scale < 0.7 ? 'ระยะ: ต้นกล้า' : 'ระยะ: ต้นโต';
+    document.getElementById('vaultTier').textContent = 'ระยะ: ' + tier.label;
   }
-  growTree(0.62);
+  growTree(4500);
 </script>
 </body>
 </html>
