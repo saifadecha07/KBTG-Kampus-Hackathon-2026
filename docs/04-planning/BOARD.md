@@ -6,6 +6,21 @@
 
 ---
 
+## 📅 กำหนดการ (ทางการจาก KBTG)
+
+| วันที่ | เหตุการณ์ |
+|---|---|
+| 4 Aug – 21 Sep 2026 | Applications — **1-Page Pitch ต้องส่งภายในนี้** |
+| 30 Sep 2026 | Candidate Announcement |
+| 2 Oct 2026 | Orientation & Hackathon Kick-off |
+| 3 Oct – 29 Oct 2026 | Pitching Preparation Session |
+| 30 Oct 2026 | Final Slide Submission |
+| 7 Nov 2026 | KBTG Kampus Hackathon Pitching Day |
+
+⚠️ วันนี้ 13 ก.ย. 2026 — เหลือ **8 วัน** ก่อนปิดรับ Applications (21 ก.ย.) รอบนี้ต้องมีแค่ **1-Page Pitch PDF** เท่านั้น (ตาม `detail.md`: "may be further developed throughout the hackathon preparation sessions") — **ไม่ต้องมี prototype/โค้ดตอนนี้** เลือก tech stack + ทำ prototype จริงเลื่อนไปทำช่วง Pitching Preparation Session (3–29 ต.ค.) หลังประกาศผ่านคัด 30 ก.ย.
+
+---
+
 ## ✅ เสร็จแล้ว
 
 ### วิเคราะห์โจทย์
@@ -128,6 +143,6 @@
 
 ## ⚠️ ข้อมูลที่ยังขาด
 
-- [ ] **วันส่ง 1-Page Pitch** — ยังไม่ได้บันทึกไว้ที่ไหนเลย วางแผนย้อนกลับไม่ได้
-- [ ] **วันแข่ง Pitching Day**
-- [ ] **จำนวนสมาชิกทีม + ใครทำอะไร**
+- [x] ~~วันส่ง 1-Page Pitch~~ **ปิดแล้ว 13 ก.ย.** — ภายใน 21 ก.ย. 2026 (ปิดรับ Applications) ดูตาราง "กำหนดการ" ด้านบน
+- [x] ~~วันแข่ง Pitching Day~~ **ปิดแล้ว 13 ก.ย.** — 7 พ.ย. 2026 (Final Slide Submission 30 ต.ค.)
+- [x] ~~จำนวนสมาชิกทีม + ใครทำอะไร~~ **ปิดแล้ว 13 ก.ย.** — 3 คน: Pornchanok Hongthong (Business Analyst — ฝั่ง business ของทั้งงาน) · Saifa Decha และ Wutthisak Boonkan (Software Engineer — sprint นี้ทำ logic และ algorithm design) — ดู README.md § ทีม; **แบ่งงาน logic/algorithm ระหว่าง Saifa กับ Wutthisak เป็นส่วนไหนบ้าง ยังไม่ระบุ** (B4 ใน `pace_strategy.md`)
