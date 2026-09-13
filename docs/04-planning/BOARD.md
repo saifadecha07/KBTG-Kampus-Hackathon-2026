@@ -55,7 +55,8 @@
 - [x] **แผน usability test เต็มรูปแบบ** — task T1–T5 · rubric · severity · เกณฑ์ตัดสิน continue/revise/pivot · **ต้อง pilot 1 คนก่อนรัน 5–8 คน**
 - [x] **กฎเงินพื้นฐาน M1–M12** — integer สตางค์ห้าม float · ปัดลงแล้วเศษเข้าบัญชีรายเดือน · เป้ารายวันปัดลงเป็นบาทเต็ม · **invariant ผลรวมต้องตรงเสมอ** · ห้ามกระเป๋าติดลบ · ledger 2 ขาเขียนอย่างเดียว · transaction เดียวต่อชุด · **ปิด L7** (UTC เก็บ / Asia/Bangkok แสดง / นับตามเวลา commit) · **แยก `reserved` ออกจาก `balance`** · server เป็นแหล่งความจริงเดียว
 - [x] **ไล่ตรวจทุก UC หาช่องโหว่ที่ยังไม่เคยลิสต์ — เจอ 49 ข้อ (G01–G49)** พร้อมข้อเสนอทุกข้อ
-- [x] **Decision log รอบ 13 ก.ย.** — Fail-open ตอน Pace ล่ม · reversal เงินตีกลับ · Priority บิลโดยผู้ใช้ · bill grouping ต้องยืนยัน · บิลรอบไม่รายเดือนให้เลือกวิธีกันเอง · แยกการปิด Safety Vault/ปิดบัญชีธนาคาร · Daily Target มีผลวันถัดไป · คิวเงินเข้าหลายก้อน · PoC ใช้ I1 · Data Model scope ใช้ J2
+- [x] **Decision log รอบ 13 ก.ย.** — Fail-open ตอน Pace ล่ม · reversal เงินตีกลับ · Priority บิลโดยผู้ใช้ · bill grouping ต้องยืนยัน · บิลรอบไม่รายเดือนให้เลือกวิธีกันเอง (ค่าเริ่มต้นทยอยกัน) · แยกการปิดกระเป๋านิรภัย/ปิดบัญชีธนาคาร · Daily Target มีผลวันถัดไป · คิวเงินเข้าหลายก้อน · PoC ใช้ I1 · Data Model scope ใช้ J2
+- [x] **รอบตรวจสอบที่ 2 (13 ก.ย.) — เจอ interaction gap 4 จุด (R15–R18)** ระหว่าง R-series ใหม่กับ B/G/M-series เดิม: reversal ก่อนแบ่ง (R15) · บิลทยอยกันที่ `stopped` ต้องคืนยอดสะสมทั้งหมด (R16) · fail-open เสนอแบ่งเฉพาะยอดเหลือจริงหลังหัก outside_pace (R17) · escalation ต้องเรียง Priority ไม่ใช่ FIFO (R18) — ดู `decision_log.md` section 8
 - [x] **Warning register** — `underfunded` · `reversal_shortfall` · candidate bill ที่ยังไม่ยืนยัน · ช่องทาง ATM/บัตรนอก PoC · UI queue ค้าง · cooldown ต้อง read-only
 
 ---
