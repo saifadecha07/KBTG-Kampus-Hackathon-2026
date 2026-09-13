@@ -35,6 +35,14 @@ First Jobbers ไทยจำนวนมากเงินเดือนหม
 
 ---
 
+## Demo Concept
+
+Mockup 3 หน้าจอ (หน้าหลัก → ยืนยันเงินเข้า → กระเป๋านิรภัย) ออกแบบด้วยภาษาการออกแบบใกล้เคียง K PLUS (สีแบรนด์เขียว KASIKORNBANK `#00A950` ซึ่งเป็นข้อมูลสาธารณะ — **ไม่ใช่ภาพหน้าจอจริงของแอป K PLUS**) มีปุ่ม "ขอถอน" ในหน้านิรภัยที่กดโต้ตอบได้จริงเพื่อจำลอง cooldown แบบเร่งเวลา
+
+📄 ไฟล์: [`docs/05-prototype/mockup.html`](docs/05-prototype/mockup.html) — ดาวน์โหลดแล้วเปิดในเบราว์เซอร์เพื่อลองกด (repo เป็น private จึงยังไม่มี live link แบบ GitHub Pages)
+
+---
+
 ## เรื่องราวเบื้องหลัง — ทำไมถึงมาเป็น Pace แบบนี้
 
 หน้านี้ไม่ใช่แค่สรุปฟีเจอร์ แต่อยากเล่ากระบวนการคิดที่นำไปสู่ทุกการตัดสินใจ เพราะเกณฑ์ของโจทย์ตัดสินจาก **ความเข้าใจปัญหา + ความเหมาะสมของ solution + การประยุกต์ใช้ทักษะของ Track** — ไม่ใช่ความใหม่ระดับโลก ทีมจึงเลือกเดิมพันกับความรัดกุมของกระบวนการ ไม่ใช่ไอเดียที่ฟังดูหวือหวาแต่ตอบคำถามตามไม่ได้
@@ -112,4 +120,5 @@ Logic ทางการเงินและ business rule ปิดครบ�
 | [`docs/03-design/decision_log.md`](docs/03-design/decision_log.md) | Decision log ล่าสุด (R1–R18) + warnings จุดเสี่ยงบัค + รายการที่ยังต้องถามก่อน design ต่อ |
 | [`docs/04-planning/BOARD.md`](docs/04-planning/BOARD.md) | สถานะงาน + กำหนดการทางการ — เสร็จแล้ว / กำลังทำ / ยังไม่เริ่ม |
 | [`docs/04-planning/AGILE_BACKLOG.md`](docs/04-planning/AGILE_BACKLOG.md) | Agile epics, user stories, priorities, dependencies, acceptance criteria และ sprint goals |
+| [`docs/05-prototype/mockup.html`](docs/05-prototype/mockup.html) | Concept mockup 3 หน้าจอ (โหลดมาเปิดในเบราว์เซอร์เพื่อลองกดปุ่มขอถอน) |
 | [`archive/CLUADE.md`](archive/CLUADE.md) | บันทึกบริบทเดิม เก็บไว้อ้างอิงเท่านั้น |
