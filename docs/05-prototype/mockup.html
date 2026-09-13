@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pace App Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#F2F4F1;
+    --ink:#16221B;
+    --muted:#5C6B62;
+    --line:#DBE2D8;
+    --surface:#FFFFFF;
+    --brand:#00A950;
+    --brand-deep:#0AA681;
+    --brand-soft:#DFF3E6;
+    --amber:#D98E3F;
+    --amber-soft:#F6E7D2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0E1512;
+      --ink:#EAF0EC;
+      --muted:#93A79C;
+      --line:#26332C;
+      --surface:#16211B;
+      --brand:#31C97C;
+      --brand-deep:#3DCB84;
+      --brand-soft:#173226;
+      --amber:#EBAE68;
+      --amber-soft:#2B2013;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0E1512;
+    --ink:#EAF0EC;
+    --muted:#93A79C;
+    --line:#26332C;
+    --surface:#16211B;
+    --brand:#31C97C;
+    --brand-deep:#3DCB84;
+    --brand-soft:#173226;
+    --amber:#EBAE68;
+    --amber-soft:#2B2013;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans Thai",system-ui,sans-serif;
+    padding:28px 20px 50px;
+  }
+  .wrap{max-width:1180px;margin:0 auto;}
+
+  header.page{margin-bottom:26px;}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--brand-deep);font-weight:600;margin-bottom:6px;
+  }
+  h1{font-size:26px;margin:0 0 8px;text-wrap:balance;letter-spacing:-.01em;}
+  .disclaimer{
+    max-width:70ch;font-size:12.5px;color:var(--muted);line-height:1.55;
+    border-left:2px solid var(--line);padding-left:10px;
+  }
+  .disclaimer b{color:var(--ink);}
+
+  .flow{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    overflow-x:auto;
+    padding:10px 4px 18px;
+  }
+  .step{display:flex;flex-direction:column;align-items:center;flex:none;width:296px;}
+  .step-cap{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;color:var(--muted);text-align:center;margin-top:12px;
+    line-height:1.5;max-width:260px;
+  }
+  .step-cap b{color:var(--ink);font-weight:600;}
+  .arrow{
+    flex:none;align-self:center;
+    font-size:22px;color:var(--line);
+    margin-top:150px;
+  }
+
+  /* Phone frame */
+  .phone{
+    width:296px;height:604px;
+    background:#0B0F0D;
+    border-radius:38px;
+    padding:10px;
+    box-shadow:0 20px 40px rgba(0,0,0,.28);
+    position:relative;
+    flex:none;
+  }
+  .screen{
+    width:100%;height:100%;
+    background:#FAFCF9;
+    border-radius:30px;
+    overflow:hidden;
+    position:relative;
+    color:#16221B;
+    font-family:"IBM Plex Sans Thai",system-ui,sans-serif;
+    display:flex;flex-direction:column;
+  }
+  .statusbar{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:8px 20px 2px;font-family:"IBM Plex Mono",monospace;
+    font-size:10px;color:#16221B;flex:none;
+  }
+  .appbar{
+    background:#00A950;
+    color:#fff;
+    padding:10px 16px 14px;
+    flex:none;
+  }
+  .appbar .greet{font-size:13px;opacity:.92;}
+  .appbar .brandline{display:flex;align-items:center;gap:6px;margin-top:2px;}
+  .appbar .pace-badge{
+    font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:11px;
+    background:rgba(255,255,255,.18);padding:2px 7px;border-radius:20px;
+    letter-spacing:.03em;
+  }
+  .appbar h2{font-size:16px;margin:0;font-weight:600;}
+
+  .content{flex:1;overflow-y:auto;padding:14px 14px 10px;background:#F4F7F3;}
+
+  .balance-card{
+    background:#0AA681;
+    color:#fff;
+    border-radius:16px;
+    padding:14px 16px 16px;
+    margin-bottom:12px;
+  }
+  .balance-card .label{font-size:10.5px;opacity:.85;letter-spacing:.03em;}
+  .balance-card .amount{
+    font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:24px;
+    margin-top:4px;font-variant-numeric:tabular-nums;
+  }
+  .balance-card .sub{font-size:10px;opacity:.8;margin-top:3px;}
+
+  .pocket-row{display:flex;flex-direction:column;gap:9px;}
+  .pocket{
+    background:#fff;border:1px solid #E4EAE1;border-radius:13px;
+    padding:11px 13px;
+  }
+  .pocket .p-top{display:flex;justify-content:space-between;align-items:baseline;}
+  .pocket .p-name{font-size:11.5px;font-weight:600;color:#33443A;}
+  .pocket .p-amt{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:14.5px;font-variant-numeric:tabular-nums;}
+  .bar-track{height:6px;background:#EDF1EA;border-radius:4px;margin-top:8px;overflow:hidden;}
+  .bar-fill{height:100%;background:#00A950;border-radius:4px;}
+  .p-note{font-size:9.5px;color:#7C8B81;margin-top:5px;}
+  .vault-chip{
+    display:inline-block;margin-top:6px;font-family:"IBM Plex Mono",monospace;
+    font-size:9px;background:#F6E7D2;color:#8A5A1F;padding:2px 7px;border-radius:20px;
+  }
+
+  .navbar{
+    flex:none;display:flex;align-items:center;justify-content:space-around;
+    background:#fff;border-top:1px solid #E7ECE5;padding:8px 6px 10px;position:relative;
+  }
+  .nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;color:#8B978F;font-size:8.5px;}
+  .nav-item.active{color:#00A950;font-weight:600;}
+  .nav-dot{width:16px;height:16px;border:1.6px solid currentColor;border-radius:4px;}
+  .nav-scan{
+    width:44px;height:44px;border-radius:50%;background:#00A950;
+    display:flex;align-items:center;justify-content:center;color:#fff;
+    margin-top:-26px;box-shadow:0 6px 14px rgba(0,169,80,.4);border:4px solid #fff;
+    font-size:16px;
+  }
+
+  /* Screen 2: modal */
+  .modal-backdrop{
+    position:absolute;inset:0;background:rgba(10,20,14,.48);
+    display:flex;align-items:flex-end;z-index:5;
+  }
+  .modal-card{
+    background:#fff;width:100%;border-radius:22px 22px 0 0;
+    padding:18px 18px 20px;
+  }
+  .modal-card .m-eyebrow{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:#7C8B81;letter-spacing:.04em;}
+  .modal-card h3{margin:4px 0 2px;font-size:17px;}
+  .modal-card .m-amt{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:22px;color:#0AA681;font-variant-numeric:tabular-nums;}
+  .split-list{margin:12px 0;border-top:1px dashed #E4EAE1;padding-top:10px;}
+  .split-row{display:flex;justify-content:space-between;font-size:11.5px;padding:4px 0;color:#33443A;}
+  .split-row b{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;}
+  .remember{display:flex;align-items:center;gap:7px;font-size:10.5px;color:#5C6B62;margin:10px 0 14px;}
+  .remember input{accent-color:#00A950;}
+  .btn-row{display:flex;gap:8px;}
+  .btn{
+    flex:1;text-align:center;padding:11px;border-radius:11px;font-size:12.5px;
+    font-weight:600;border:none;cursor:pointer;font-family:inherit;
+  }
+  .btn-primary{background:#00A950;color:#fff;}
+  .btn-ghost{background:#F1F4EF;color:#33443A;}
+
+  /* Screen 3: vault + tree */
+  .vault-amt-card{
+    background:#16221B;color:#fff;border-radius:16px;padding:16px;text-align:center;margin-bottom:12px;
+  }
+  .vault-amt-card .label{font-size:10.5px;opacity:.75;}
+  .vault-amt-card .amount{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:26px;margin-top:4px;font-variant-numeric:tabular-nums;}
+  .vault-amt-card .tier{font-size:10px;color:#EBAE68;margin-top:4px;font-weight:600;}
+
+  .tree-card{
+    background:linear-gradient(#EAF3EC,#F4F7F3);
+    border:1px solid #E4EAE1;border-radius:16px;padding:10px 10px 4px;margin-bottom:12px;
+    text-align:center;
+  }
+  .tree-card svg{width:150px;height:130px;}
+  .tree-caption{font-size:9.5px;color:#7C8B81;padding-bottom:8px;}
+
+  .withdraw-panel{background:#fff;border:1px solid #E4EAE1;border-radius:14px;padding:13px;}
+  .withdraw-panel h4{margin:0 0 4px;font-size:12.5px;}
+  .withdraw-panel p{margin:0 0 10px;font-size:10.5px;color:#7C8B81;line-height:1.5;}
+  .countdown{
+    font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:19px;color:#8A5A1F;
+    background:#F6E7D2;border-radius:10px;padding:8px;text-align:center;margin-bottom:9px;
+    font-variant-numeric:tabular-nums;display:none;
+  }
+  .released-msg{
+    font-size:11px;color:#0AA681;font-weight:600;background:#DFF3E6;border-radius:10px;
+    padding:9px;text-align:center;margin-bottom:9px;display:none;
+  }
+  .btn-full{width:100%;}
+  .demo-note{font-size:9px;color:#A7B2AB;text-align:center;margin-top:7px;}
+
+  footer{
+    margin-top:8px;font-size:11.5px;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:12px;line-height:1.6;
+  }
+  footer a{color:var(--brand-deep);}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="page">
+    <div class="eyebrow">Pace · Concept Mockup</div>
+    <h1>Pace ในหน้าตาแบบ K PLUS</h1>
+    <p class="disclaimer">
+      ออกแบบด้วยภาษาการออกแบบใกล้เคียง K PLUS — ใช้สีแบรนด์เขียวของ KASIKORNBANK <b>#00A950</b> (ข้อมูลสาธารณะ) และโครงสร้างเมนูแบบแอปธนาคารไทยทั่วไป (แถบล่าง 5 ปุ่ม + QR ตรงกลาง)
+      <b>นี่คือ concept mockup ที่ทีมออกแบบเอง ไม่ใช่ภาพหน้าจอจริงของแอป K PLUS</b> ปุ่มขอถอนในหน้าที่ 3 กดโต้ตอบได้จริงเพื่อจำลอง flow cooldown (เร่งเวลาให้ดูจบใน 12 วินาที)
+    </p>
+  </header>
+
+  <div class="flow">
+
+    <div class="step">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>9:41</span><span>●●● 100%</span></div>
+          <div class="appbar">
+            <div class="greet">สวัสดี, พลอย</div>
+            <div class="brandline"><h2>หน้าหลัก</h2><span class="pace-badge">PACE ON</span></div>
+          </div>
+          <div class="content">
+            <div class="balance-card">
+              <div class="label">บัญชีเงินรายเดือน (พร้อมใช้ หลังกันบิลแล้ว)</div>
+              <div class="amount">18,000.00 ฿</div>
+              <div class="sub">กันบิลไว้แล้ว 3,200 ฿ · เหลือ 21 วันจนเงินเข้ารอบหน้า</div>
+            </div>
+            <div class="pocket-row">
+              <div class="pocket">
+                <div class="p-top"><span class="p-name">กระเป๋าใช้จ่ายรายวัน</span><span class="p-amt">320.00 ฿</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:53%"></div></div>
+                <div class="p-note">เป้าวันนี้ 600 ฿ · เติมอัตโนมัติทุกเที่ยงคืน</div>
+              </div>
+              <div class="pocket">
+                <div class="p-top"><span class="p-name">กระเป๋านิรภัย</span><span class="p-amt">4,500.00 ฿</span></div>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;background:#D98E3F"></div></div>
+                <span class="vault-chip">ต้นกล้ากำลังโต 🌱</span>
+              </div>
+            </div>
+          </div>
+          <div class="navbar">
+            <div class="nav-item active"><div class="nav-dot"></div>หน้าหลัก</div>
+            <div class="nav-item"><div class="nav-dot"></div>โอนเงิน</div>
+            <div class="nav-scan">▣</div>
+            <div class="nav-item"><div class="nav-dot"></div>จ่ายบิล</div>
+            <div class="nav-item"><div class="nav-dot"></div>เพิ่มเติม</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-cap"><b>1 · หน้าหลัก</b><br>เห็นบัญชีรายเดือน + กระเป๋ารายวัน/นิรภัยคู่กันตลอด</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>9:41</span><span>●●● 100%</span></div>
+          <div class="appbar">
+            <div class="greet">สวัสดี, พลอย</div>
+            <div class="brandline"><h2>หน้าหลัก</h2><span class="pace-badge">PACE ON</span></div>
+          </div>
+          <div class="content" style="position:relative;">
+            <div class="balance-card"><div class="label">บัญชีเงินรายเดือน</div><div class="amount">— ฿</div></div>
+            <div class="modal-backdrop">
+              <div class="modal-card">
+                <div class="m-eyebrow">เงินเข้าจาก บริษัท ABC จำกัด</div>
+                <h3>แบ่งเงินตามแผน Pace ไหม?</h3>
+                <div class="m-amt">22,500.00 ฿</div>
+                <div class="split-list">
+                  <div class="split-row"><span>นิรภัย (20%)</span><b>+4,500.00 ฿</b></div>
+                  <div class="split-row"><span>บัญชีรายเดือน</span><b>+18,000.00 ฿</b></div>
+                  <div class="split-row"><span>เป้ารายวันแนะนำ</span><b>600 ฿/วัน</b></div>
+                </div>
+                <label class="remember"><input type="checkbox" checked> จำไว้ ทำอัตโนมัติทุกครั้งจากผู้ส่งนี้</label>
+                <div class="btn-row">
+                  <button class="btn btn-ghost">ไม่ใช่ตอนนี้</button>
+                  <button class="btn btn-primary">แบ่งเลย</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar">
+            <div class="nav-item active"><div class="nav-dot"></div>หน้าหลัก</div>
+            <div class="nav-item"><div class="nav-dot"></div>โอนเงิน</div>
+            <div class="nav-scan">▣</div>
+            <div class="nav-item"><div class="nav-dot"></div>จ่ายบิล</div>
+            <div class="nav-item"><div class="nav-dot"></div>เพิ่มเติม</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-cap"><b>2 · เงินเข้า</b><br>ระบบไม่เดา ให้ผู้ใช้ยืนยันครั้งเดียว แล้วจำผู้ส่งไว้</div>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <div class="step">
+      <div class="phone">
+        <div class="screen">
+          <div class="statusbar"><span>9:41</span><span>●●● 100%</span></div>
+          <div class="appbar">
+            <div class="greet">‹ กลับ</div>
+            <div class="brandline"><h2>กระเป๋านิรภัย</h2></div>
+          </div>
+          <div class="content">
+            <div class="vault-amt-card">
+              <div class="label">ยอดสะสมในนิรภัย</div>
+              <div class="amount" id="vaultAmt">4,500.00 ฿</div>
+              <div class="tier" id="vaultTier">ระยะ: ต้นกล้า</div>
+            </div>
+            <div class="tree-card">
+              <svg viewBox="0 0 150 130" id="treeSvg">
+                <ellipse cx="75" cy="118" rx="55" ry="8" fill="#DCE7DD"/>
+                <rect x="70" y="70" width="10" height="45" rx="4" fill="#8A6A45"/>
+                <circle id="leaf1" cx="75" cy="62" r="26" fill="#4FAE6E"/>
+                <circle id="leaf2" cx="52" cy="78" r="0" fill="#5FBE7C"/>
+                <circle id="leaf3" cx="98" cy="78" r="0" fill="#5FBE7C"/>
+                <circle id="leaf4" cx="75" cy="40" r="0" fill="#7ACB8F"/>
+              </svg>
+              <div class="tree-caption">ต้นไม้โตตามยอดสะสม — ยอดเยอะ ทรงพุ่มยิ่งแผ่</div>
+            </div>
+            <div class="withdraw-panel">
+              <h4 id="wTitle">ขอถอนจากนิรภัย</h4>
+              <p id="wDesc">กดขอถอนแล้วต้องรอ cooldown ก่อนเงินจะย้ายเข้ากระเป๋ารายวัน ยกเลิกได้ฟรีตลอดช่วงที่รอ</p>
+              <div class="countdown" id="cd">00:12</div>
+              <div class="released-msg" id="rel">ครบเวลาแล้ว — ปล่อยเงิน 1,000 ฿ เข้ากระเป๋ารายวันอัตโนมัติ</div>
+              <button class="btn btn-primary btn-full" id="wBtn" onclick="startWithdraw()">ขอถอน 1,000 ฿</button>
+              <div class="demo-note">demo: cooldown จริงคือ 24 ชม. ย่อให้ดูจบใน 12 วินาที</div>
+            </div>
+          </div>
+          <div class="navbar">
+            <div class="nav-item"><div class="nav-dot"></div>หน้าหลัก</div>
+            <div class="nav-item"><div class="nav-dot"></div>โอนเงิน</div>
+            <div class="nav-scan">▣</div>
+            <div class="nav-item"><div class="nav-dot"></div>จ่ายบิล</div>
+            <div class="nav-item active"><div class="nav-dot"></div>เพิ่มเติม</div>
+          </div>
+        </div>
+      </div>
+      <div class="step-cap"><b>3 · กระเป๋านิรภัย</b><br>กดปุ่ม "ขอถอน" ด้านซ้ายเพื่อดู cooldown แบบเร่งเวลา</div>
+    </div>
+
+  </div>
+
+  <footer>
+    Concept mockup ประกอบ pitch ของทีม Pace — โครงลอจิกและกฎการเงินทั้งหมดอยู่ที่
+    <a href="https://github.com/saifadecha07/KBTG-Kampus-Hackathon-2026">github.com/saifadecha07/KBTG-Kampus-Hackathon-2026</a>
+  </footer>
+
+</div>
+
+<script>
+  let cdInterval = null;
+  function startWithdraw(){
+    const btn = document.getElementById('wBtn');
+    const cd = document.getElementById('cd');
+    const rel = document.getElementById('rel');
+    const desc = document.getElementById('wDesc');
+    if(btn.dataset.state === 'done') return;
+    btn.disabled = true;
+    btn.textContent = 'กำลังรอ cooldown…';
+    desc.textContent = 'เงินยังอยู่ในนิรภัย ยกเลิกได้ตลอดช่วงนี้โดยไม่มีค่าปรับ';
+    cd.style.display = 'block';
+    let seconds = 12;
+    cd.textContent = '00:' + String(seconds).padStart(2,'0');
+    cdInterval = setInterval(() => {
+      seconds -= 1;
+      if(seconds <= 0){
+        clearInterval(cdInterval);
+        cd.style.display = 'none';
+        rel.style.display = 'block';
+        btn.textContent = 'ปล่อยเงินแล้ว';
+        btn.dataset.state = 'done';
+        document.getElementById('vaultAmt').textContent = '3,500.00 ฿';
+        growTree(0.55);
+      } else {
+        cd.textContent = '00:' + String(seconds).padStart(2,'0');
+      }
+    }, 1000);
+  }
+
+  function growTree(scale){
+    document.getElementById('leaf1').setAttribute('r', 26*scale + 8);
+    document.getElementById('leaf2').setAttribute('r', 20*scale);
+    document.getElementById('leaf3').setAttribute('r', 20*scale);
+    document.getElementById('leaf4').setAttribute('r', 18*scale);
+    document.getElementById('vaultTier').textContent = scale < 0.7 ? 'ระยะ: ต้นกล้า' : 'ระยะ: ต้นโต';
+  }
+  growTree(0.62);
+</script>
+</body>
+</html>
