@@ -1,6 +1,8 @@
 # Board — Pace
 
-> อัปเดตล่าสุด: 2026-09-12
+> อัปเดตล่าสุด: 2026-09-13
+
+> Agile backlog และ acceptance criteria อยู่ที่ [`AGILE_BACKLOG.md`](AGILE_BACKLOG.md) ส่วนไฟล์นี้ใช้เป็นภาพรวมสถานะงาน
 
 ---
 
@@ -53,6 +55,8 @@
 - [x] **แผน usability test เต็มรูปแบบ** — task T1–T5 · rubric · severity · เกณฑ์ตัดสิน continue/revise/pivot · **ต้อง pilot 1 คนก่อนรัน 5–8 คน**
 - [x] **กฎเงินพื้นฐาน M1–M12** — integer สตางค์ห้าม float · ปัดลงแล้วเศษเข้าบัญชีรายเดือน · เป้ารายวันปัดลงเป็นบาทเต็ม · **invariant ผลรวมต้องตรงเสมอ** · ห้ามกระเป๋าติดลบ · ledger 2 ขาเขียนอย่างเดียว · transaction เดียวต่อชุด · **ปิด L7** (UTC เก็บ / Asia/Bangkok แสดง / นับตามเวลา commit) · **แยก `reserved` ออกจาก `balance`** · server เป็นแหล่งความจริงเดียว
 - [x] **ไล่ตรวจทุก UC หาช่องโหว่ที่ยังไม่เคยลิสต์ — เจอ 49 ข้อ (G01–G49)** พร้อมข้อเสนอทุกข้อ
+- [x] **Decision log รอบ 13 ก.ย.** — Fail-open ตอน Pace ล่ม · reversal เงินตีกลับ · Priority บิลโดยผู้ใช้ · bill grouping ต้องยืนยัน · บิลรอบไม่รายเดือนให้เลือกวิธีกันเอง · แยกการปิด Safety Vault/ปิดบัญชีธนาคาร · Daily Target มีผลวันถัดไป · คิวเงินเข้าหลายก้อน · PoC ใช้ I1 · Data Model scope ใช้ J2
+- [x] **Warning register** — `underfunded` · `reversal_shortfall` · candidate bill ที่ยังไม่ยืนยัน · ช่องทาง ATM/บัตรนอก PoC · UI queue ค้าง · cooldown ต้อง read-only
 
 ---
 
@@ -79,7 +83,7 @@
 
 ### ต้องปิดก่อนเริ่มเขียนโค้ด (เหลือแค่นี้ — logic จบแล้ว เข้า architecture ได้)
 - [ ] **เลือก tech stack** — frontend / backend ตามที่ทีมถนัด ห้ามเรียนของใหม่ตอนแข่ง
-- [ ] **Data Model** — `Pocket` (balance + **`reserved`** ตาม M9 · หน่วยเป็นสตางค์ integer ตาม M1) · **`LedgerEntry`** (สองขา เขียนอย่างเดียว ตาม M6 · idempotency_key unique ตาม L10) · `WithdrawRequest` (ผูกยอดตายตัว ตาม L6/L8) · `SplitRule` · `DailyTargetConfig` · `OverspendLog` · **`Bill`** (ผู้รับ · รอบ · แบบคงที่/ผันผวน · ยอดที่กัน · วันประจำ · สถานะ · แหล่งที่มา: ระบบเจอเอง/ผู้ใช้เพิ่ม) · **`SenderRule`** (auto-approve / เงินผ่านทาง)
+- [ ] **Data Model (scope J2)** — `Pocket` (balance/reserved/pending_unsplit) · `LedgerEntry` · `IncomeTransaction` (nullable due_date, ไม่มี cycle_id) · `WithdrawRequest` · `SplitRule` · `DailyTargetConfig` · `OverspendLog` · `Bill` · `SenderRule` · `AuditLog` · `IdempotencyKey` โดยต้องเคารพ M1–M12 และ warnings ใน `docs/03-design/decision_log.md`
 - [ ] **API Contract** — mock เงินเข้า · ดูยอดกระเป๋า · mock ใช้จ่าย · ขอถอน · ยกเลิก · ยกเลิกการแบ่ง (L13) · สถิติ · **ดู/เพิ่ม/แก้/ลบบิล**
 
 ### Implement
