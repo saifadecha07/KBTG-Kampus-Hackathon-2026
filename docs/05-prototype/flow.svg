@@ -1,8 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 730" font-family="'Noto Sans Thai','Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="appbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#132824"/>
+      <stop offset="1" stop-color="#0A1614"/>
+    </linearGradient>
+    <linearGradient id="treebg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#153A2E"/>
+      <stop offset="1" stop-color="#0E241C"/>
+    </linearGradient>
+  </defs>
+
   <rect x="0" y="0" width="1040" height="730" fill="#F2F4F1"/>
 
   <text x="20" y="28" font-size="19" font-weight="700" fill="#12241C">Pace ในหน้าตาแบบ K PLUS — Concept Mockup</text>
-  <text x="20" y="48" font-size="11.5" fill="#5C6B62">สีแบรนด์เขียว KASIKORNBANK #00A950 (ข้อมูลสาธารณะ) ใช้ประกอบแนวคิดเท่านั้น — ไม่ใช่ภาพหน้าจอจริงของแอป K PLUS</text>
+  <text x="20" y="48" font-size="11.5" fill="#5C6B62">โทนสีและองค์ประกอบอ้างอิงจากภาพตัวอย่างแอปบน App Store ของ K PLUS จริง (มืด/เขียวมิ้นท์) — ทีมออกแบบเองเพื่อใช้ประกอบ pitch ไม่ใช่ภาพหน้าจอจริงของแอป</text>
 
   <!-- connector arrows -->
   <path d="M325,360 L362,360" stroke="#C3CDC6" stroke-width="3" fill="none"/>
@@ -12,68 +23,79 @@
 
   <!-- ================= PHONE 1 : HOME ================= -->
   <g transform="translate(20,70)">
-    <rect x="0" y="0" width="300" height="580" rx="34" fill="#0B0F0D"/>
+    <rect x="0" y="0" width="300" height="580" rx="34" fill="#050A09"/>
     <clipPath id="clip1"><rect x="8" y="8" width="284" height="564" rx="26"/></clipPath>
     <g clip-path="url(#clip1)">
-      <rect x="8" y="8" width="284" height="564" fill="#FAFCF9"/>
-      <rect x="8" y="8" width="284" height="62" fill="#00A950"/>
-      <text x="24" y="30" font-size="11" fill="#ffffff" opacity="0.9">สวัสดี, พลอย</text>
-      <text x="24" y="52" font-size="15" font-weight="600" fill="#ffffff">หน้าหลัก</text>
-      <rect x="212" y="38" width="64" height="18" rx="9" fill="#ffffff" fill-opacity="0.2"/>
-      <text x="222" y="51" font-size="8.5" font-weight="700" fill="#ffffff">PACE ON</text>
+      <rect x="8" y="8" width="284" height="564" fill="url(#appbg)"/>
 
-      <rect x="8" y="70" width="284" height="430" fill="#F4F7F3"/>
+      <text x="24" y="34" font-size="11" fill="#ffffff" opacity="0.75">สวัสดี, พลอย</text>
+      <text x="24" y="56" font-size="16" font-weight="600" fill="#ffffff">หน้าหลัก</text>
+      <rect x="216" y="40" width="60" height="18" rx="9" fill="none" stroke="#2FE6B4" stroke-width="1.3"/>
+      <text x="246" y="53" font-size="8.3" font-weight="700" fill="#2FE6B4" text-anchor="middle">PACE ON</text>
 
-      <rect x="22" y="84" width="256" height="74" rx="14" fill="#0AA681"/>
-      <text x="34" y="104" font-size="9.5" fill="#ffffff" opacity="0.88">บัญชีเงินรายเดือน (พร้อมใช้ หลังกันบิลแล้ว)</text>
-      <text x="34" y="129" font-size="20" font-weight="700" fill="#ffffff">18,000.00 ฿</text>
-      <text x="34" y="146" font-size="8.5" fill="#ffffff" opacity="0.82">กันบิลไว้แล้ว 3,200 ฿ · เหลือ 21 วันจนเงินเข้ารอบหน้า</text>
+      <text x="24" y="92" font-size="9.5" fill="#ffffff" opacity="0.65">บัญชีเงินรายเดือน (พร้อมใช้ หลังกันบิลแล้ว)</text>
+      <text x="24" y="122" font-size="26" font-weight="700" fill="#2FE6B4">18,000.00 ฿</text>
+      <text x="24" y="140" font-size="8.7" fill="#ffffff" opacity="0.55">กันบิลไว้แล้ว 3,200 ฿ · เหลือ 21 วันจนเงินเข้ารอบหน้า</text>
 
-      <rect x="22" y="170" width="256" height="64" rx="12" fill="#ffffff" stroke="#E4EAE1"/>
-      <text x="34" y="189" font-size="10.5" font-weight="600" fill="#33443A">กระเป๋าใช้จ่ายรายวัน</text>
-      <text x="244" y="189" font-size="12.5" font-weight="600" fill="#16221B" text-anchor="end">320.00 ฿</text>
-      <rect x="34" y="198" width="232" height="6" rx="3" fill="#EDF1EA"/>
-      <rect x="34" y="198" width="123" height="6" rx="3" fill="#00A950"/>
-      <text x="34" y="219" font-size="8.5" fill="#7C8B81">เป้าวันนี้ 600 ฿ · เติมอัตโนมัติทุกเที่ยงคืน</text>
+      <rect x="22" y="160" width="256" height="66" rx="14" fill="#FAFCFA"/>
+      <text x="34" y="180" font-size="10.5" font-weight="600" fill="#16221B">กระเป๋าใช้จ่ายรายวัน</text>
+      <text x="244" y="180" font-size="12.5" font-weight="600" fill="#0F8C68" text-anchor="end">320.00 ฿</text>
+      <rect x="34" y="190" width="232" height="6" rx="3" fill="#E3EEE9"/>
+      <rect x="34" y="190" width="123" height="6" rx="3" fill="#17B98F"/>
+      <text x="34" y="211" font-size="8.5" fill="#5C6B62">เป้าวันนี้ 600 ฿ · เติมอัตโนมัติทุกเที่ยงคืน</text>
 
-      <rect x="22" y="244" width="256" height="64" rx="12" fill="#ffffff" stroke="#E4EAE1"/>
-      <text x="34" y="263" font-size="10.5" font-weight="600" fill="#33443A">กระเป๋านิรภัย</text>
-      <text x="244" y="263" font-size="12.5" font-weight="600" fill="#16221B" text-anchor="end">4,500.00 ฿</text>
-      <rect x="34" y="273" width="128" height="16" rx="8" fill="#F6E7D2"/>
-      <text x="42" y="285" font-size="8" fill="#8A5A1F">ต้นกล้ากำลังโต</text>
+      <rect x="22" y="238" width="256" height="66" rx="14" fill="#FAFCFA"/>
+      <text x="34" y="258" font-size="10.5" font-weight="600" fill="#16221B">กระเป๋านิรภัย</text>
+      <text x="244" y="258" font-size="12.5" font-weight="600" fill="#16221B" text-anchor="end">4,500.00 ฿</text>
+      <rect x="34" y="268" width="128" height="17" rx="8.5" fill="#F6E7D2"/>
+      <text x="42" y="280" font-size="8" fill="#8A5A1F">🌱 ต้นกล้ากำลังโต</text>
 
-      <rect x="8" y="500" width="284" height="72" fill="#ffffff"/>
-      <rect x="8" y="500" width="284" height="1.4" fill="#E7ECE5"/>
-      <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#00A950" stroke-width="1.6"/>
-      <text x="38" y="544" font-size="7.2" fill="#00A950" text-anchor="middle" font-weight="600">หน้าหลัก</text>
-      <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="96" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">โอนเงิน</text>
-      <circle cx="150" cy="502" r="22" fill="#00A950" stroke="#ffffff" stroke-width="4"/>
-      <rect x="143" y="495" width="14" height="14" rx="2" fill="none" stroke="#ffffff" stroke-width="1.6"/>
-      <rect x="203" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="210" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">จ่ายบิล</text>
-      <rect x="261" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="268" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">เพิ่มเติม</text>
+      <text x="22" y="332" font-size="8.7" fill="#ffffff" opacity="0.4" letter-spacing="0.06em">บริการเพิ่มเติม</text>
+      <g fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.4">
+        <circle cx="46" cy="366" r="20"/>
+        <circle cx="112" cy="366" r="20"/>
+        <circle cx="178" cy="366" r="20"/>
+        <circle cx="244" cy="366" r="20"/>
+      </g>
+      <text x="46" y="372" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.8">↗</text>
+      <text x="112" y="372" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.8">฿</text>
+      <text x="178" y="372" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.8">▤</text>
+      <text x="244" y="372" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.8">◫</text>
+      <text x="46" y="398" font-size="7.3" fill="#ffffff" opacity="0.5" text-anchor="middle">โอนเงิน</text>
+      <text x="112" y="398" font-size="7.3" fill="#ffffff" opacity="0.5" text-anchor="middle">เติมเงิน</text>
+      <text x="178" y="398" font-size="7.3" fill="#ffffff" opacity="0.5" text-anchor="middle">จ่ายบิล</text>
+      <text x="244" y="398" font-size="7.3" fill="#ffffff" opacity="0.5" text-anchor="middle">Statement</text>
+
+      <rect x="8" y="500" width="284" height="72" fill="#0D1D1A"/>
+      <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#2FE6B4" stroke-width="1.6"/>
+      <text x="38" y="544" font-size="7.2" fill="#2FE6B4" text-anchor="middle" font-weight="600">หน้าหลัก</text>
+      <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="96" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">ธุรกรรม</text>
+      <circle cx="150" cy="502" r="22" fill="#2FE6B4" stroke="#0D1D1A" stroke-width="4"/>
+      <rect x="143" y="495" width="14" height="14" rx="2" fill="none" stroke="#08211B" stroke-width="1.6"/>
+      <rect x="203" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="210" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">สแกน</text>
+      <rect x="261" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="268" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">อื่นๆ</text>
     </g>
   </g>
 
   <!-- ================= PHONE 2 : INCOME CONFIRM ================= -->
   <g transform="translate(370,70)">
-    <rect x="0" y="0" width="300" height="580" rx="34" fill="#0B0F0D"/>
+    <rect x="0" y="0" width="300" height="580" rx="34" fill="#050A09"/>
     <clipPath id="clip2"><rect x="8" y="8" width="284" height="564" rx="26"/></clipPath>
     <g clip-path="url(#clip2)">
-      <rect x="8" y="8" width="284" height="564" fill="#FAFCF9"/>
-      <rect x="8" y="8" width="284" height="62" fill="#00A950"/>
-      <text x="24" y="30" font-size="11" fill="#ffffff" opacity="0.9">สวัสดี, พลอย</text>
-      <text x="24" y="52" font-size="15" font-weight="600" fill="#ffffff">หน้าหลัก</text>
+      <rect x="8" y="8" width="284" height="564" fill="url(#appbg)"/>
+      <text x="24" y="34" font-size="11" fill="#ffffff" opacity="0.75">สวัสดี, พลอย</text>
+      <text x="24" y="56" font-size="16" font-weight="600" fill="#ffffff">หน้าหลัก</text>
+      <text x="24" y="122" font-size="26" font-weight="700" fill="#2FE6B4" opacity="0.35">— ฿</text>
 
-      <rect x="8" y="70" width="284" height="430" fill="#F4F7F3"/>
-      <rect x="8" y="70" width="284" height="430" fill="#0A140E" fill-opacity="0.5"/>
+      <rect x="8" y="8" width="284" height="564" fill="#050D0B" fill-opacity="0.55"/>
 
-      <rect x="8" y="292" width="284" height="208" rx="0" fill="#ffffff"/>
-      <text x="24" y="314" font-size="8.5" fill="#7C8B81">เงินเข้าจาก บริษัท ABC จำกัด</text>
+      <rect x="8" y="292" width="284" height="208" fill="#FAFCFA"/>
+      <text x="24" y="314" font-size="8.5" fill="#5C6B62">เงินเข้าจาก บริษัท ABC จำกัด</text>
       <text x="24" y="336" font-size="15" font-weight="600" fill="#16221B">แบ่งเงินตามแผน Pace ไหม?</text>
-      <text x="24" y="360" font-size="19" font-weight="700" fill="#0AA681">22,500.00 ฿</text>
+      <text x="24" y="360" font-size="19" font-weight="700" fill="#0F8C68">22,500.00 ฿</text>
       <line x1="24" y1="370" x2="276" y2="370" stroke="#E4EAE1" stroke-dasharray="3,3"/>
       <text x="24" y="387" font-size="10.5" fill="#33443A">นิรภัย (20%)</text>
       <text x="276" y="387" font-size="10.5" font-weight="600" fill="#33443A" text-anchor="end">+4,500.00 ฿</text>
@@ -82,77 +104,72 @@
       <text x="24" y="417" font-size="10.5" fill="#33443A">เป้ารายวันแนะนำ</text>
       <text x="276" y="417" font-size="10.5" font-weight="600" fill="#33443A" text-anchor="end">600 ฿/วัน</text>
 
-      <rect x="24" y="429" width="12" height="12" rx="3" fill="#00A950"/>
+      <rect x="24" y="429" width="12" height="12" rx="3" fill="#17B98F"/>
       <text x="42" y="439" font-size="9.5" fill="#5C6B62">จำไว้ ทำอัตโนมัติทุกครั้งจากผู้ส่งนี้</text>
 
-      <rect x="24" y="452" width="118" height="34" rx="10" fill="#F1F4EF"/>
+      <rect x="24" y="452" width="118" height="34" rx="10" fill="#EEF2F0"/>
       <text x="83" y="473" font-size="11" fill="#33443A" text-anchor="middle">ไม่ใช่ตอนนี้</text>
-      <rect x="152" y="452" width="124" height="34" rx="10" fill="#00A950"/>
+      <rect x="152" y="452" width="124" height="34" rx="10" fill="#17B98F"/>
       <text x="214" y="473" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">แบ่งเลย</text>
 
-      <rect x="8" y="500" width="284" height="72" fill="#ffffff"/>
-      <rect x="8" y="500" width="284" height="1.4" fill="#E7ECE5"/>
-      <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#00A950" stroke-width="1.6"/>
-      <text x="38" y="544" font-size="7.2" fill="#00A950" text-anchor="middle" font-weight="600">หน้าหลัก</text>
-      <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="96" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">โอนเงิน</text>
-      <circle cx="150" cy="502" r="22" fill="#00A950" stroke="#ffffff" stroke-width="4"/>
-      <rect x="143" y="495" width="14" height="14" rx="2" fill="none" stroke="#ffffff" stroke-width="1.6"/>
-      <rect x="203" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="210" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">จ่ายบิล</text>
-      <rect x="261" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="268" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">เพิ่มเติม</text>
+      <rect x="8" y="500" width="284" height="72" fill="#0D1D1A"/>
+      <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#2FE6B4" stroke-width="1.6"/>
+      <text x="38" y="544" font-size="7.2" fill="#2FE6B4" text-anchor="middle" font-weight="600">หน้าหลัก</text>
+      <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="96" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">ธุรกรรม</text>
+      <circle cx="150" cy="502" r="22" fill="#2FE6B4" stroke="#0D1D1A" stroke-width="4"/>
+      <rect x="143" y="495" width="14" height="14" rx="2" fill="none" stroke="#08211B" stroke-width="1.6"/>
+      <rect x="203" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="210" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">สแกน</text>
+      <rect x="261" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="268" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">อื่นๆ</text>
     </g>
   </g>
 
   <!-- ================= PHONE 3 : VAULT ================= -->
   <g transform="translate(720,70)">
-    <rect x="0" y="0" width="300" height="580" rx="34" fill="#0B0F0D"/>
+    <rect x="0" y="0" width="300" height="580" rx="34" fill="#050A09"/>
     <clipPath id="clip3"><rect x="8" y="8" width="284" height="564" rx="26"/></clipPath>
     <g clip-path="url(#clip3)">
-      <rect x="8" y="8" width="284" height="564" fill="#FAFCF9"/>
-      <rect x="8" y="8" width="284" height="62" fill="#00A950"/>
-      <text x="24" y="30" font-size="11" fill="#ffffff" opacity="0.9">‹ กลับ</text>
-      <text x="24" y="52" font-size="15" font-weight="600" fill="#ffffff">กระเป๋านิรภัย</text>
+      <rect x="8" y="8" width="284" height="564" fill="url(#appbg)"/>
 
-      <rect x="8" y="70" width="284" height="430" fill="#F4F7F3"/>
+      <text x="24" y="34" font-size="11" fill="#ffffff" opacity="0.75">‹ กลับ</text>
+      <text x="24" y="56" font-size="16" font-weight="600" fill="#ffffff">กระเป๋านิรภัย</text>
 
-      <rect x="22" y="84" width="256" height="90" rx="16" fill="#16221B"/>
-      <text x="150" y="106" font-size="9.5" fill="#ffffff" opacity="0.75" text-anchor="middle">ยอดสะสมในนิรภัย</text>
-      <text x="150" y="134" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">4,500.00 ฿</text>
-      <text x="150" y="152" font-size="9.5" font-weight="600" fill="#EBAE68" text-anchor="middle">ระยะ: ต้นกล้า</text>
+      <text x="150" y="90" font-size="9.5" fill="#ffffff" opacity="0.6" text-anchor="middle">ยอดสะสมในนิรภัย</text>
+      <text x="150" y="118" font-size="24" font-weight="700" fill="#2FE6B4" text-anchor="middle">4,500.00 ฿</text>
+      <text x="150" y="136" font-size="9.5" font-weight="600" fill="#F0AA5E" text-anchor="middle">ระยะ: ต้นกล้า</text>
 
-      <rect x="22" y="186" width="256" height="150" rx="16" fill="#EAF3EC" stroke="#E4EAE1"/>
-      <ellipse cx="150" cy="305" rx="70" ry="8" fill="#DCE7DD"/>
-      <rect x="144" y="255" width="12" height="50" rx="4" fill="#8A6A45"/>
-      <circle cx="122" cy="262" r="20" fill="#5FBE7C"/>
-      <circle cx="178" cy="262" r="20" fill="#5FBE7C"/>
-      <circle cx="150" cy="245" r="30" fill="#4FAE6E"/>
-      <circle cx="150" cy="216" r="17" fill="#7ACB8F"/>
-      <text x="150" y="326" font-size="9" fill="#7C8B81" text-anchor="middle">ต้นไม้โตตามยอดสะสม — ยอดเยอะ ทรงพุ่มยิ่งแผ่</text>
+      <rect x="22" y="152" width="256" height="164" rx="16" fill="url(#treebg)"/>
+      <ellipse cx="150" cy="288" rx="70" ry="8" fill="#0A1E17"/>
+      <rect x="144" y="238" width="12" height="50" rx="4" fill="#8A6A45"/>
+      <circle cx="122" cy="245" r="20" fill="#1F9E6E"/>
+      <circle cx="178" cy="245" r="20" fill="#1F9E6E"/>
+      <circle cx="150" cy="228" r="30" fill="#2FCB8D"/>
+      <circle cx="150" cy="199" r="17" fill="#69E3B4"/>
+      <text x="150" y="308" font-size="9" fill="#ffffff" opacity="0.55" text-anchor="middle">ต้นไม้โตตามยอดสะสม — ยอดเยอะ ทรงพุ่มยิ่งแผ่</text>
 
-      <rect x="22" y="346" width="256" height="140" rx="14" fill="#ffffff" stroke="#E4EAE1"/>
-      <text x="34" y="366" font-size="11.5" font-weight="600" fill="#16221B">ขอถอนจากนิรภัย</text>
-      <text x="34" y="382" font-size="9" fill="#7C8B81">กดขอถอนแล้วต้องรอ cooldown ก่อนเงิน</text>
-      <text x="34" y="394" font-size="9" fill="#7C8B81">จะย้ายเข้ากระเป๋ารายวัน ยกเลิกได้ฟรี</text>
-      <rect x="34" y="403" width="232" height="32" rx="8" fill="#F6E7D2"/>
-      <text x="150" y="425" font-size="15" font-weight="700" fill="#8A5A1F" text-anchor="middle">00:12</text>
-      <rect x="34" y="445" width="232" height="32" rx="10" fill="#00A950"/>
-      <text x="150" y="466" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">ขอถอน 1,000 ฿</text>
-      <text x="150" y="480" font-size="7.5" fill="#A7B2AB" text-anchor="middle">demo: จริงคือ 24 ชม. ย่อให้ดูจบใน 12 วินาที</text>
+      <rect x="22" y="330" width="256" height="140" rx="14" fill="#FAFCFA"/>
+      <text x="34" y="350" font-size="11.5" font-weight="600" fill="#16221B">ขอถอนจากนิรภัย</text>
+      <text x="34" y="366" font-size="9" fill="#5C6B62">กดขอถอนแล้วต้องรอ cooldown ก่อนเงิน</text>
+      <text x="34" y="378" font-size="9" fill="#5C6B62">จะย้ายเข้ากระเป๋ารายวัน ยกเลิกได้ฟรี</text>
+      <rect x="34" y="387" width="232" height="32" rx="8" fill="#F6E7D2"/>
+      <text x="150" y="409" font-size="15" font-weight="700" fill="#8A5A1F" text-anchor="middle">00:12</text>
+      <rect x="34" y="429" width="232" height="32" rx="10" fill="#17B98F"/>
+      <text x="150" y="450" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">ขอถอน 1,000 ฿</text>
+      <text x="150" y="464" font-size="7.5" fill="#8A968F" text-anchor="middle">demo: จริงคือ 24 ชม. ย่อให้ดูจบใน 12 วินาที</text>
 
-      <rect x="8" y="500" width="284" height="72" fill="#ffffff"/>
-      <rect x="8" y="500" width="284" height="1.4" fill="#E7ECE5"/>
-      <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="38" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">หน้าหลัก</text>
-      <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="96" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">โอนเงิน</text>
-      <circle cx="150" cy="502" r="22" fill="#00A950" stroke="#ffffff" stroke-width="4"/>
-      <rect x="143" y="495" width="14" height="14" rx="2" fill="none" stroke="#ffffff" stroke-width="1.6"/>
-      <rect x="203" y="518" width="14" height="14" rx="3" fill="none" stroke="#8B978F" stroke-width="1.6"/>
-      <text x="210" y="544" font-size="7.2" fill="#8B978F" text-anchor="middle">จ่ายบิล</text>
-      <rect x="261" y="518" width="14" height="14" rx="3" fill="none" stroke="#00A950" stroke-width="1.6"/>
-      <text x="268" y="544" font-size="7.2" fill="#00A950" text-anchor="middle" font-weight="600">เพิ่มเติม</text>
+      <rect x="8" y="500" width="284" height="72" fill="#0D1D1A"/>
+      <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="38" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">หน้าหลัก</text>
+      <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="96" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">ธุรกรรม</text>
+      <circle cx="150" cy="502" r="22" fill="#2FE6B4" stroke="#0D1D1A" stroke-width="4"/>
+      <rect x="143" y="495" width="14" height="14" rx="2" fill="none" stroke="#08211B" stroke-width="1.6"/>
+      <rect x="203" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
+      <text x="210" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">สแกน</text>
+      <rect x="261" y="518" width="14" height="14" rx="3" fill="none" stroke="#2FE6B4" stroke-width="1.6"/>
+      <text x="268" y="544" font-size="7.2" fill="#2FE6B4" text-anchor="middle" font-weight="600">อื่นๆ</text>
     </g>
   </g>
 
