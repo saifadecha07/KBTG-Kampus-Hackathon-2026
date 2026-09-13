@@ -306,7 +306,7 @@ Problem → Feature (auto-split = novelty claim, vault = ฟีเจอร์�
 
 ### 💡 Incentive ของกระเป๋านิรภัย — ปิด A+3 และ B2
 
-**ปัญหาที่ต้องแก้:** Pace ขอให้ผู้ใช้ทำให้เงินตัวเองใช้ยากขึ้น งานวิจัย commitment device ชี้ว่าคนสมัครใจใช้แค่ราว 28% ถ้าไม่มีอะไรตอบแทนเลย ฟีเจอร์นี้ขายไม่ออกตั้งแต่หน้าแรก
+**ปัญหาที่ต้องแก้:** Pace ขอให้ผู้ใช้ทำให้เงินตัวเองใช้ยากขึ้น งานวิจัย SEED commitment savings account ในฟิลิปปินส์ (**Ashraf, Karlan & Yin, 2006, Quarterly Journal of Economics**) พบว่าเมื่อเสนอบัญชีออมแบบล็อกเงินเองให้ลูกค้าธนาคาร 710 คนโดยไม่มีดอกเบี้ยพิเศษตอบแทนเลย มีคนตอบรับเปิดบัญชีแค่ **202 คน (28.4%)** — ถ้า Pace ไม่มี incentive อะไรเลย ฟีเจอร์นี้เสี่ยงขายไม่ออกตั้งแต่หน้าแรกในระดับเดียวกัน
 
 **ทางที่เลือก: ดอกเบี้ยพิเศษแบบมีเพดาน (Capped Interest)**
 
@@ -409,6 +409,7 @@ Problem → Feature (auto-split = novelty claim, vault = ฟีเจอร์�
 - [Wikipedia – Commitment device](https://en.wikipedia.org/wiki/Commitment_device)
 - [Qapital – Payday Divvy auto-split paycheck](https://apps.apple.com/us/app/qapital-the-money-saving-app/id969977669)
 - [I Like To Dabble – Qapital Review: Rule-Based Automated Savings](https://iliketodabble.com/qapital-review/)
+- [Ashraf, Karlan & Yin (2006) — Tying Odysseus to the Mast: Evidence from a Commitment Savings Product in the Philippines, QJE 121(2), 635–672 — SEED account 28.4% take-up (202/710) with no interest incentive](https://academic.oup.com/qje/article-abstract/121/2/635/1884028) · [ฉบับอ่านฟรี](https://navaashraf.com/wp-content/uploads/2016/07/tyingodysseus_qje.pdf)
 
 **กฎ ธปท. / มาตรการธนาคารไทย:**
 - [สภาผู้บริโภค – มาตรการหน่วงเงิน ชะลอโอน 72 ชม.](https://www.tcc.or.th/delayed-transaction/)
