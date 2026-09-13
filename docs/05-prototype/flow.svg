@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 730" font-family="'Noto Sans Thai','Segoe UI',Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 1190" font-family="'Noto Sans Thai','Segoe UI',Arial,sans-serif">
   <defs>
     <linearGradient id="appbg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#132824"/>
@@ -10,7 +10,7 @@
     </linearGradient>
   </defs>
 
-  <rect x="0" y="0" width="1040" height="730" fill="#F2F4F1"/>
+  <rect x="0" y="0" width="1040" height="1190" fill="#F2F4F1"/>
 
   <text x="20" y="28" font-size="19" font-weight="700" fill="#12241C">Pace ในหน้าตาแบบ K PLUS — Concept Mockup</text>
   <text x="20" y="48" font-size="11.5" fill="#5C6B62">โทนสีและองค์ประกอบอ้างอิงจากภาพตัวอย่างแอปบน App Store ของ K PLUS จริง (มืด/เขียวมิ้นท์) — ทีมออกแบบเองเพื่อใช้ประกอบ pitch ไม่ใช่ภาพหน้าจอจริงของแอป</text>
@@ -182,4 +182,161 @@
 
   <text x="870" y="672" font-size="12.5" font-weight="700" fill="#12241C" text-anchor="middle">3 · กระเป๋านิรภัย</text>
   <text x="870" y="690" font-size="10" fill="#5C6B62" text-anchor="middle">ขอถอนแล้วรอ cooldown เห็นต้นไม้โตตามยอดสะสม</text>
+
+  <!-- ================= ROW 2 : SUPPORTING SCREENS ================= -->
+  <text x="520" y="724" font-size="14" font-weight="700" fill="#12241C" text-anchor="middle">หน้าจอที่เหลือ — spec ปิดครบแล้วใน design_usecase.md</text>
+
+  <!-- 4: บิล -->
+  <g transform="translate(17,740)">
+    <rect x="0" y="0" width="190" height="380" rx="24" fill="#050A09"/>
+    <clipPath id="clip4"><rect x="6" y="6" width="178" height="368" rx="16"/></clipPath>
+    <g clip-path="url(#clip4)">
+      <rect x="6" y="6" width="178" height="368" fill="url(#appbg)"/>
+      <text x="18" y="30" font-size="12" font-weight="600" fill="#ffffff">รายการบิล</text>
+
+      <rect x="18" y="44" width="154" height="38" rx="10" fill="#FAFCFA"/>
+      <text x="28" y="60" font-size="8.5" font-weight="600" fill="#16221B">ค่าเช่าห้อง</text>
+      <text x="160" y="60" font-size="9" font-weight="600" fill="#0F8C68" text-anchor="end">3,200 ฿</text>
+      <circle cx="28" cy="71" r="3" fill="#17B98F"/>
+      <text x="35" y="74" font-size="6.3" fill="#5C6B62">ระบบเจอเอง</text>
+
+      <rect x="18" y="90" width="154" height="38" rx="10" fill="#FAFCFA"/>
+      <text x="28" y="106" font-size="8.5" font-weight="600" fill="#16221B">ค่าเน็ต (ผูกบัตร)</text>
+      <text x="160" y="106" font-size="9" font-weight="600" fill="#8A5A1F" text-anchor="end">600 ฿</text>
+      <circle cx="28" cy="117" r="3" fill="#D98E3F"/>
+      <text x="35" y="120" font-size="6.3" fill="#5C6B62">เพิ่มเอง</text>
+
+      <rect x="18" y="136" width="154" height="38" rx="10" fill="#FAFCFA"/>
+      <text x="28" y="152" font-size="8.5" font-weight="600" fill="#16221B">ประกันรายปี</text>
+      <text x="160" y="152" font-size="9" font-weight="600" fill="#8A5A1F" text-anchor="end">417 ฿/ด.</text>
+      <circle cx="28" cy="163" r="3" fill="#D98E3F"/>
+      <text x="35" y="166" font-size="6.3" fill="#5C6B62">เพิ่มเอง · ทยอยกัน</text>
+
+      <rect x="18" y="182" width="154" height="30" rx="15" fill="none" stroke="#2FE6B4" stroke-width="1.4"/>
+      <text x="95" y="201" font-size="9" fill="#2FE6B4" text-anchor="middle">+ เพิ่มบิล</text>
+
+      <text x="18" y="345" font-size="6.8" fill="#ffffff" opacity="0.5">แยกชัดว่าอันไหนระบบเจอเอง</text>
+      <text x="18" y="357" font-size="6.8" fill="#ffffff" opacity="0.5">อันไหนผู้ใช้เพิ่มเอง (UC-13)</text>
+    </g>
+  </g>
+
+  <!-- 5: สถิติ -->
+  <g transform="translate(221,740)">
+    <rect x="0" y="0" width="190" height="380" rx="24" fill="#050A09"/>
+    <clipPath id="clip5"><rect x="6" y="6" width="178" height="368" rx="16"/></clipPath>
+    <g clip-path="url(#clip5)">
+      <rect x="6" y="6" width="178" height="368" fill="url(#appbg)"/>
+      <text x="18" y="30" font-size="12" font-weight="600" fill="#ffffff">สถิติการใช้เงิน</text>
+
+      <rect x="18" y="44" width="154" height="64" rx="12" fill="#1E2C27"/>
+      <text x="28" y="62" font-size="7.5" fill="#ffffff" opacity="0.6">เกินเป้าไปแล้วเดือนนี้</text>
+      <text x="28" y="86" font-size="15" font-weight="700" fill="#F0AA5E">2 วัน · 850 ฿</text>
+
+      <g>
+        <rect x="18" y="162" width="14" height="20" fill="#17B98F" fill-opacity="0.55"/>
+        <rect x="40" y="150" width="14" height="32" fill="#17B98F" fill-opacity="0.55"/>
+        <rect x="62" y="168" width="14" height="14" fill="#F0AA5E"/>
+        <rect x="84" y="142" width="14" height="40" fill="#17B98F" fill-opacity="0.55"/>
+        <rect x="106" y="164" width="14" height="18" fill="#17B98F" fill-opacity="0.55"/>
+        <rect x="128" y="136" width="14" height="46" fill="#F0AA5E"/>
+        <rect x="150" y="158" width="14" height="24" fill="#17B98F" fill-opacity="0.55"/>
+      </g>
+      <text x="18" y="196" font-size="6.5" fill="#ffffff" opacity="0.5">เกินเป้า 2 วันในสัปดาห์นี้ (สีส้ม)</text>
+
+      <rect x="18" y="206" width="154" height="50" rx="12" fill="#153A2E"/>
+      <text x="28" y="222" font-size="7.5" fill="#ffffff" opacity="0.6">เงินในนิรภัยโตขึ้น</text>
+      <text x="28" y="244" font-size="13" font-weight="700" fill="#2FE6B4">+1,200 ฿ เดือนนี้</text>
+
+      <text x="18" y="278" font-size="7" fill="#ffffff" opacity="0.55">รายเดือน 18,000 ฿ · รายวัน 320 ฿</text>
+      <text x="18" y="290" font-size="7" fill="#ffffff" opacity="0.55">นิรภัย 4,500 ฿</text>
+    </g>
+  </g>
+
+  <!-- 6: ตั้งค่า -->
+  <g transform="translate(425,740)">
+    <rect x="0" y="0" width="190" height="380" rx="24" fill="#050A09"/>
+    <clipPath id="clip6"><rect x="6" y="6" width="178" height="368" rx="16"/></clipPath>
+    <g clip-path="url(#clip6)">
+      <rect x="6" y="6" width="178" height="368" fill="url(#appbg)"/>
+      <text x="18" y="30" font-size="12" font-weight="600" fill="#ffffff">ตั้งค่า</text>
+
+      <text x="18" y="54" font-size="8" fill="#ffffff" opacity="0.85">สัดส่วนแบ่งเงิน</text>
+      <text x="172" y="54" font-size="8" font-weight="600" fill="#2FE6B4" text-anchor="end">40/20/40%</text>
+      <line x1="18" y1="62" x2="172" y2="62" stroke="#ffffff" stroke-opacity="0.12"/>
+
+      <text x="18" y="82" font-size="8" fill="#ffffff" opacity="0.85">เป้ารายวัน</text>
+      <text x="172" y="82" font-size="8" font-weight="600" fill="#2FE6B4" text-anchor="end">600 ฿/วัน</text>
+      <line x1="18" y1="90" x2="172" y2="90" stroke="#ffffff" stroke-opacity="0.12"/>
+
+      <rect x="14" y="98" width="164" height="40" rx="10" fill="#1E2C27"/>
+      <text x="24" y="114" font-size="8" fill="#ffffff" opacity="0.85">ความยาว cooldown</text>
+      <text x="24" y="130" font-size="9.5" font-weight="700" fill="#ffffff">24 ชม.</text>
+      <rect x="118" y="108" width="46" height="15" rx="7.5" fill="none" stroke="#F0AA5E"/>
+      <text x="141" y="118" font-size="6" fill="#F0AA5E" text-anchor="middle">🔒 คงที่</text>
+
+      <text x="18" y="156" font-size="8" fill="#ffffff" opacity="0.85">ผู้ส่งที่จำไว้</text>
+      <text x="172" y="156" font-size="7" font-weight="600" fill="#ffffff" text-anchor="end">1 บัญชี (ABC)</text>
+      <line x1="18" y1="164" x2="172" y2="164" stroke="#ffffff" stroke-opacity="0.12"/>
+
+      <text x="18" y="200" font-size="6.8" fill="#ffffff" opacity="0.5">cooldown ตั้งครั้งเดียวตอนเปิดบัญชี</text>
+      <text x="18" y="212" font-size="6.8" fill="#ffffff" opacity="0.5">หน้านี้แสดง read-only เท่านั้น</text>
+    </g>
+  </g>
+
+  <!-- 7: ความเป็นส่วนตัว -->
+  <g transform="translate(629,740)">
+    <rect x="0" y="0" width="190" height="380" rx="24" fill="#050A09"/>
+    <clipPath id="clip7"><rect x="6" y="6" width="178" height="368" rx="16"/></clipPath>
+    <g clip-path="url(#clip7)">
+      <rect x="6" y="6" width="178" height="368" fill="url(#appbg)"/>
+      <text x="18" y="30" font-size="12" font-weight="600" fill="#ffffff">ความเป็นส่วนตัว</text>
+
+      <text x="18" y="52" font-size="7.8" fill="#ffffff" opacity="0.8">Pace ใช้ข้อมูล:</text>
+      <text x="18" y="68" font-size="7.5" fill="#ffffff" opacity="0.7">• ยอดเงิน · วันที่ทำรายการ</text>
+      <text x="18" y="82" font-size="7.5" fill="#ffffff" opacity="0.7">• รหัสผู้ส่ง/ผู้รับ</text>
+      <text x="18" y="96" font-size="7.5" fill="#ffffff" opacity="0.7">• รายการบิลที่ผูกไว้</text>
+
+      <rect x="18" y="124" width="154" height="54" rx="10" fill="#1E2C27"/>
+      <text x="28" y="142" font-size="7.5" font-weight="600" fill="#F0AA5E">ไม่เก็บข้อมูลเกินจำเป็น</text>
+      <text x="28" y="158" font-size="7" fill="#ffffff" opacity="0.65">ไม่อ่าน SMS · ไม่อ่านอีเมล</text>
+      <text x="28" y="170" font-size="7" fill="#ffffff" opacity="0.65">ไม่แตะ clipboard</text>
+
+      <rect x="18" y="196" width="154" height="30" rx="15" fill="none" stroke="#E08585" stroke-width="1.4"/>
+      <text x="95" y="215" font-size="8" fill="#E08585" text-anchor="middle">ถอนความยินยอม</text>
+
+      <text x="18" y="246" font-size="6.5" fill="#ffffff" opacity="0.5">ตามหลัก PDPA มาตรา 22</text>
+    </g>
+  </g>
+
+  <!-- 8: Demo Panel (ไม่ใช่หน้าจอลูกค้า จึงวาดเป็นแผงคุมแยก ไม่ใช่กรอบโทรศัพท์) -->
+  <g transform="translate(833,740)">
+    <rect x="0" y="90" width="190" height="200" rx="16" fill="#12211F" stroke="#2FE6B4" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="95" y="116" font-size="9" font-weight="700" fill="#2FE6B4" text-anchor="middle" letter-spacing="0.04em">DEMO PANEL</text>
+    <text x="95" y="130" font-size="6.5" fill="#ffffff" opacity="0.55" text-anchor="middle">ใช้บนเวทีเท่านั้น ไม่ใช่หน้าจอลูกค้า</text>
+
+    <rect x="17" y="144" width="156" height="30" rx="8" fill="#0D1D1A" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="95" y="163" font-size="8" fill="#ffffff" text-anchor="middle">จำลองเงินเข้า</text>
+
+    <rect x="17" y="180" width="156" height="30" rx="8" fill="#0D1D1A" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="95" y="199" font-size="8" fill="#ffffff" text-anchor="middle">ข้ามไปวันถัดไป</text>
+
+    <rect x="17" y="216" width="156" height="30" rx="8" fill="#0D1D1A" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="95" y="235" font-size="8" fill="#ffffff" text-anchor="middle">เร่งเวลา cooldown</text>
+  </g>
+
+  <!-- row 2 captions -->
+  <text x="112" y="1140" font-size="11.5" font-weight="700" fill="#12241C" text-anchor="middle">4 · บิล</text>
+  <text x="112" y="1156" font-size="8.7" fill="#5C6B62" text-anchor="middle">แยกอันที่ระบบเจอเองกับที่เพิ่มเอง (UC-13)</text>
+
+  <text x="316" y="1140" font-size="11.5" font-weight="700" fill="#12241C" text-anchor="middle">5 · สถิติ</text>
+  <text x="316" y="1156" font-size="8.7" fill="#5C6B62" text-anchor="middle">วันที่ใช้เกิน + นิรภัยโตขึ้นเท่าไหร่ (UC-12)</text>
+
+  <text x="520" y="1140" font-size="11.5" font-weight="700" fill="#12241C" text-anchor="middle">6 · ตั้งค่า</text>
+  <text x="520" y="1156" font-size="8.7" fill="#5C6B62" text-anchor="middle">cooldown ล็อกแก้ไม่ได้ — read-only เท่านั้น</text>
+
+  <text x="724" y="1140" font-size="11.5" font-weight="700" fill="#12241C" text-anchor="middle">7 · ความเป็นส่วนตัว</text>
+  <text x="724" y="1156" font-size="8.7" fill="#5C6B62" text-anchor="middle">PDPA — ใช้ข้อมูลอะไรบ้าง ถอนยินยอมได้</text>
+
+  <text x="928" y="1140" font-size="11.5" font-weight="700" fill="#12241C" text-anchor="middle">8 · Demo Panel</text>
+  <text x="928" y="1156" font-size="8.7" fill="#5C6B62" text-anchor="middle">จำลองเงินเข้า/ข้ามวัน/เร่ง cooldown บนเวที</text>
 </svg>
