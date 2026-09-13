@@ -78,11 +78,12 @@
 ## 2. เนื้อหาสำหรับ 1-Page Pitch
 
 ### Problem Statement
-- First Jobbers ไทยจำนวนมากเงินเดือนหมดก่อนสิ้นเดือนโดยไม่รู้ตัวว่าเงินไปไหน
-- คนอายุ 21–30 (โดยเฉพาะผู้หญิง) เป็นกลุ่มเหยื่อหลักของ scam ในไทย ความเสียหายระดับประเทศสูงมาก (หมื่นล้าน-แสนล้านบาท/ปี) และโตต่อเนื่อง — **online job scam** (หลอกสมัครงาน/โอนมัดจำ) เป็นรูปแบบที่เล็งกลุ่มคนหางาน/first jobber โดยตรง
-- เงินเดือนแรกเข้าของบัณฑิตจบใหม่ไทยส่วนใหญ่อยู่ช่วง 15,001–30,000 บาท ขณะค่าครองชีพเมืองสูง ทำให้บริหารเงินเดือนชนเดือนยาก
+- **First Jobbers ไทยใช้เงินแบบเดือนชนเดือนสูงกว่าค่าเฉลี่ยโลก** — Gen Z ไทย 63% และ Gen Y ไทย 64% ใช้เงินหมดพอดีในแต่ละเดือน ไม่มีเหลือเก็บ เทียบค่าเฉลี่ยโลกที่ 52% (**Deloitte Global 2025 Gen Z and Millennials Survey**, เก็บข้อมูล ต.ค.–ธ.ค. 2024, กลุ่มตัวอย่างไทย 330 คน)
+- คนอายุ 21–30 (โดยเฉพาะผู้หญิง) เป็นกลุ่มเหยื่อหลักของ scam ในไทย ความเสียหายเฉลี่ย **12,956 บาท/คน** รวมกว่า **1.1 แสนล้านบาท/ปีทั้งประเทศ** (**GASA**, อ้างใน Nation Thailand พ.ย. 2025) และโตต่อเนื่อง — **online job scam** (หลอกสมัครงาน/โอนมัดจำ) เป็นรูปแบบที่เล็งกลุ่มคนหางาน/first jobber โดยตรง
+- เงินเดือนแรกเข้าของบัณฑิตจบใหม่ไทย **25.6%** อยู่ช่วง 15,001–30,000 บาท (**JobsDB Thailand**) ขณะค่าครองชีพเมืองสูง ทำให้บริหารเงินเดือนชนเดือนยาก
+- สนับสนุนเพิ่ม: **กว่า 70%** ของผู้บริโภคไทยมีเงินสำรองฉุกเฉินไม่ถึง 3 เดือน และคนวัยทำงานรายได้ต่ำกว่า 30,000 บาท/เดือนเกือบทั้งหมดไม่มีเงินออมเลย (**SCB EIC Outlook Q2/2024**, n=2,090) — ยืนยันว่าปัญหา "จัดการเงินไม่ทัน" ไม่ใช่แค่ความรู้สึก แต่มีตัวเลขรองรับจากหลายแหล่งตรงกัน
 
-> ⚠️ ตัวเลข "84% เงินเดือนหมดเป็นศูนย์" / "52,000 บาทต่อครั้ง" จาก reference เดิม **ยังไม่เจอ source ยืนยัน** — ต้องเช็ค source จริงหรือเปลี่ยนไปใช้ตัวเลขที่มี source (ดู References) ก่อนใส่สไลด์จริง
+ตัวเลขทั้งหมดแทนที่ "84% เงินเดือนหมดเป็นศูนย์" และ "52,000 บาทต่อครั้ง" จาก reference เดิมที่หา source ไม่เจอ — ปิดแล้ว ดู URL เต็มใน References ด้านล่าง
 
 ### Proposed Solution
 Pace = auto-split เงินเดือนเข้า ePocket 3 บัญชี + เติมกระเป๋าใช้จ่ายรายวันอัตโนมัติทุกวัน + กระเป๋านิรภัยหน่วงเวลา (รายละเอียด section 1)
@@ -353,7 +354,7 @@ Problem → Feature (auto-split = novelty claim, vault = ฟีเจอร์�
 
 - [x] ยืนยัน Track → **Track 1**
 - [ ] **ตัดสินชื่อทีมภาษาอังกฤษ** → ตั้งชื่อไฟล์ `ชื่อทีม_1PagePitch.pdf` (≤1MB)
-- [ ] เช็ค/แทนที่ตัวเลข **84% / 52,000 บาท** ที่ยังไม่มี source
+- [x] ~~เช็ค/แทนที่ตัวเลข 84% / 52,000 บาท ที่ยังไม่มี source~~ **ปิดแล้ว** — แทนด้วย Deloitte 2025 (63%/64% เดือนชนเดือน), GASA/Nation Thailand (12,956 บาท/คน), JobsDB (25.6% ช่วง 15,001–30,000), SCB EIC (70%+ ไม่มีเงินสำรอง) ดู Problem Statement + References
 - [ ] **บีบเนื้อหาให้เหลือ 1 หน้าจริง** — ห้ามก็อปไฟล์นี้ไปตรงๆ (ยาวหลายหน้า) บีบเหลือหัวข้อละ 2–4 บรรทัด
 - [ ] **ใส่ slide เทียบของเดิมให้ครบ** — MAKE by KBank + **K PLUS Lock Account** + **Schedule Transfer** + ePocket/Qapital/Maybank พร้อมจุดต่าง (สำคัญมาก: 3 ตัวแรกเป็นของคนจัดแข่งเอง)
 - [ ] ใส่ 1 บรรทัดตีกรอบ scope anti-scam ไม่ over-claim
@@ -389,8 +390,12 @@ Problem → Feature (auto-split = novelty claim, vault = ฟีเจอร์�
 - [Bangkok Post – 47% of Thais hit by financial fraudsters](https://www.bangkokpost.com/business/general/3110930/47-of-thais-hit-by-financial-fraudsters)
 - [GASA – Thailand Faces Unprecedented Scam Crisis ฿115.3B/ปี](https://gasa.org/knowledge-base/blog/thailand-faces-unprecedented-scam-crisis-with-thb-115-3-billion-lost-annually)
 - [GASA – State of Scams in Thailand Report 2025](https://gasa.org/knowledge-base/reports/state-of-scams-in-thailand-report-2025)
+- [Nation Thailand – Six in ten Thais fallen victim to scams, 110 billion baht lost — เฉลี่ย 12,956 บาท/คน (พ.ย. 2025)](https://www.nationthailand.com/news/general/40058129)
 - [Nation Thailand – Online job scams costliest fraud of the week](https://www.nationthailand.com/news/general/40064729)
 - [Medium – The Financial Struggles of First-Jobbers Living in Bangkok](https://medium.com/@sooksodsai.sooksomchitra/the-financial-struggles-of-first-jobbers-living-in-bangkok-d8d9f6c0fc07)
+- [MarketingOops – Deloitte Global 2025 Gen Z and Millennials Survey: Gen Z ไทย 63% / Gen Y ไทย 64% ใช้เงินเดือนชนเดือน (โลกเฉลี่ย 52%)](https://www.marketingoops.com/reports/deloitte-global-2025-gen-z-and-millennials-survey/)
+- [JobsDB Thailand – เด็กจบใหม่เรียกเงินเดือนแค่ไหนกำลังดี (25.6% อยู่ช่วง 15,001–30,000 บาท)](https://th.jobsdb.com/th/career-advice/article/%E0%B8%88%E0%B8%9A%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B8%AD%E0%B8%99)
+- [Thairath – อ้างอิง SCB EIC Outlook Q2/2024 (n=2,090): กว่า 70% เงินสำรองฉุกเฉินไม่ถึง 3 เดือน](https://www.thairath.co.th/money/economics/thai_economics/2794667)
 
 **K-ePocket / MAKE by KBank (ของในเครือ KBTG):**
 - [KBank Live – แนะนำ K-ePocket](https://x.com/KBank_Live/status/2019657158753964131)
