@@ -66,7 +66,7 @@
       <text x="178" y="398" font-size="7.3" fill="#ffffff" opacity="0.5" text-anchor="middle">จ่ายบิล</text>
       <text x="244" y="398" font-size="7.3" fill="#ffffff" opacity="0.5" text-anchor="middle">Statement</text>
 
-      <rect x="8" y="500" width="284" height="72" fill="#0D1D1A"/>
+      <rect x="8" y="480" width="284" height="92" fill="#0D1D1A"/>
       <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#2FE6B4" stroke-width="1.6"/>
       <text x="38" y="544" font-size="7.2" fill="#2FE6B4" text-anchor="middle" font-weight="600">หน้าหลัก</text>
       <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
@@ -112,7 +112,7 @@
       <rect x="152" y="452" width="124" height="34" rx="10" fill="#17B98F"/>
       <text x="214" y="473" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">แบ่งเลย</text>
 
-      <rect x="8" y="500" width="284" height="72" fill="#0D1D1A"/>
+      <rect x="8" y="480" width="284" height="92" fill="#0D1D1A"/>
       <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#2FE6B4" stroke-width="1.6"/>
       <text x="38" y="544" font-size="7.2" fill="#2FE6B4" text-anchor="middle" font-weight="600">หน้าหลัก</text>
       <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
@@ -159,7 +159,7 @@
       <text x="150" y="450" font-size="11" font-weight="600" fill="#ffffff" text-anchor="middle">ขอถอน 1,000 ฿</text>
       <text x="150" y="464" font-size="7.5" fill="#8A968F" text-anchor="middle">demo: จริงคือ 24 ชม. ย่อให้ดูจบใน 12 วินาที</text>
 
-      <rect x="8" y="500" width="284" height="72" fill="#0D1D1A"/>
+      <rect x="8" y="480" width="284" height="92" fill="#0D1D1A"/>
       <rect x="31" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
       <text x="38" y="544" font-size="7.2" fill="#7C8B85" text-anchor="middle">หน้าหลัก</text>
       <rect x="89" y="518" width="14" height="14" rx="3" fill="none" stroke="#7C8B85" stroke-width="1.6"/>
