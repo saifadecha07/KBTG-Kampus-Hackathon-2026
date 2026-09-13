@@ -48,7 +48,7 @@
 | ID | Priority | Status | Story | Acceptance criteria | Dependency |
 |---|---|---|---|---|---|
 | CORE-01 | P0 | Backlog | ในฐานะระบบ เราต้อง split เงินโดยรักษา invariant | split รวมยอดตรง, เศษเข้าบัญชีรายเดือน, ไม่มีกระเป๋าติดลบ, ledger สองขาใน transaction เดียว | ARC-02 |
-| CORE-02 | P0 | Backlog | ในฐานะระบบ เราต้องเติม Daily Pocket และ backfill ได้ถูกต้อง | เติมเฉพาะส่วนต่าง, carry-over ไม่หาย, backfill atomic, เงินรายเดือนหมดแล้วไม่ crash | CORE-01 |
+| CORE-02 | P0 | Backlog | ในฐานะระบบ เราต้องเติมกระเป๋าใช้จ่ายรายวันและ backfill ได้ถูกต้อง | เติมเฉพาะส่วนต่าง, carry-over ไม่หาย, backfill atomic, เงินรายเดือนหมดแล้วไม่ crash | CORE-01 |
 | CORE-03 | P0 | Backlog | ในฐานะระบบ เราต้องรองรับ idempotency และ concurrency | retry ไม่สร้างรายการซ้ำ, cron ซ้ำไม่เติมซ้ำ, row lock ลำดับคงที่, multi-device ไม่สร้าง request ซ้ำ | CORE-01 |
 | CORE-04 | P0 | Backlog | ในฐานะระบบ เราต้องรองรับ Fail-open ตอน Pace ล่ม | จ่าย/โอนจากบัญชีหลักต่อได้, หยุด split/backfill/vault withdrawal, บันทึก `outside_pace`, reconcile ภายหลัง | ARC-02 |
 | CORE-05 | P1 | Backlog | ในฐานะระบบ เราต้องจัดการเงินตีกลับหลัง split | reverse เงินที่เหลือทุกกระเป๋าโดยไม่รอ cooldown, ไม่ทำให้ pocket ติดลบ, บันทึก `reversal_shortfall` เพื่อส่ง dispute ธนาคาร | CORE-01, ARC-02 |
@@ -60,7 +60,7 @@
 | BILL-01 | P0 | Backlog | ในฐานะระบบ เราต้องเรียนรู้บิลจากประวัติ 6 เดือนตาม B1–B5 | แยก fixed/variable, วันประจำ, cross-month และสถานะ `active`/`late`/`stopped` ได้ตาม traceability | ARC-02 |
 | BILL-02 | P0 | Backlog | ในฐานะผู้ใช้ เราต้องยืนยัน candidate bill ก่อนระบบกันเงิน | candidate ที่ยังไม่ยืนยันไม่ถูก reserve; ผู้รับเดียวกันหลายบิลแยกด้วยยอด+วันที่และให้แก้/รวมได้ | BILL-01 |
 | BILL-03 | P0 | Backlog | ในฐานะผู้ใช้ เราต้องกำหนด Priority ของบิลเอง | priority ใช้ก่อน due date; ถ้าไม่ตั้งใช้ due date ใกล้สุด; เงินไม่พอสำหรับบิลแรกให้ถามผู้ใช้ก่อน | BILL-02 |
-| BILL-04 | P1 | Backlog | ในฐานะผู้ใช้ เราต้องเพิ่มบิลรายไตรมาส/รายปีเอง | เลือกกันเต็มก้อนหรือทยอยกัน; ต้องยืนยันก่อนบันทึก; รายปีตรวจเจอเองไม่ได้แต่เพิ่มเองได้ | BILL-02 |
+| BILL-04 | P1 | Backlog | ในฐานะผู้ใช้ เราต้องเพิ่มบิลรายไตรมาส/รายปีเอง | ค่าเริ่มต้นคือทยอยกันเฉลี่ย, แสดงยอดต่อรอบ+ยอดสะสมก่อนยืนยัน, สลับเป็นกันเต็มก้อนได้ก่อนยืนยันหรือแก้ทีหลัง; รายปีตรวจเจอเองไม่ได้แต่เพิ่มเองได้ | BILL-02 |
 | BILL-05 | P0 | Backlog | ในฐานะระบบ เราต้อง escalate เงินเข้าที่ค้างเฉพาะเมื่อมี deadline จริง | pending item มี nullable `due_date`, ไม่มี `cycle_id`; `null` อยู่ passive queue; `ESCALATION_LEAD_DAYS=5`; เตือนวันละครั้ง 3 ครั้งแล้ว auto-reserve แบบ recompute/idempotent แต่ไม่ split | BILL-02, CORE-01 |
 | BILL-06 | P0 | Backlog | ในฐานะระบบ เราต้องรักษา `balance`, `reserved`, `pending_unsplit`, `available` ให้สื่อความจริง | `available = balance - reserved - pending_unsplit`; underfunded ถูกแสดงชัด; classification ทุกครั้งมี ledger/audit; เงินเข้ารอบถัดไปจัดการตาม priority | BILL-03, CORE-01 |
 
