@@ -47,8 +47,8 @@
       <rect x="22" y="238" width="256" height="66" rx="14" fill="#FAFCFA"/>
       <text x="34" y="258" font-size="10.5" font-weight="600" fill="#16221B">กระเป๋านิรภัย</text>
       <text x="244" y="258" font-size="12.5" font-weight="600" fill="#16221B" text-anchor="end">4,500.00 ฿</text>
-      <rect x="34" y="268" width="128" height="17" rx="8.5" fill="#F6E7D2"/>
-      <text x="42" y="280" font-size="8" fill="#8A5A1F">🌱 ต้นกล้ากำลังโต</text>
+      <rect x="34" y="268" width="150" height="17" rx="8.5" fill="#F6E7D2"/>
+      <text x="42" y="280" font-size="8" fill="#8A5A1F">🌱 ต้นกล้า · 🔥 ต่อเนื่อง 3 รอบ</text>
 
       <text x="22" y="332" font-size="8.7" fill="#ffffff" opacity="0.4" letter-spacing="0.06em">บริการเพิ่มเติม</text>
       <g fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.4">
@@ -138,16 +138,18 @@
 
       <text x="150" y="90" font-size="9.5" fill="#ffffff" opacity="0.6" text-anchor="middle">ยอดสะสมในนิรภัย</text>
       <text x="150" y="118" font-size="24" font-weight="700" fill="#2FE6B4" text-anchor="middle">4,500.00 ฿</text>
-      <text x="150" y="136" font-size="9.5" font-weight="600" fill="#F0AA5E" text-anchor="middle">ระยะ: ต้นกล้า</text>
+      <rect x="98" y="126" width="104" height="18" rx="9" fill="#F6E7D2"/>
+      <text x="150" y="139" font-size="9" font-weight="700" fill="#8A5A1F" text-anchor="middle">🔥 ต่อเนื่อง 3 รอบ</text>
 
-      <rect x="22" y="152" width="256" height="164" rx="16" fill="url(#treebg)"/>
+      <rect x="22" y="152" width="256" height="172" rx="16" fill="url(#treebg)"/>
       <ellipse cx="150" cy="288" rx="70" ry="8" fill="#0A1E17"/>
       <rect x="144" y="238" width="12" height="50" rx="4" fill="#8A6A45"/>
       <circle cx="122" cy="245" r="20" fill="#1F9E6E"/>
       <circle cx="178" cy="245" r="20" fill="#1F9E6E"/>
       <circle cx="150" cy="228" r="30" fill="#2FCB8D"/>
       <circle cx="150" cy="199" r="17" fill="#69E3B4"/>
-      <text x="150" y="308" font-size="9" fill="#ffffff" opacity="0.55" text-anchor="middle">ต้นไม้โตตามยอดสะสม — ยอดเยอะ ทรงพุ่มยิ่งแผ่</text>
+      <text x="150" y="304" font-size="9" fill="#ffffff" opacity="0.55" text-anchor="middle">ต้นไม้โตตาม "ความสม่ำเสมอ" (Vault Streak)</text>
+      <text x="150" y="316" font-size="8" fill="#ffffff" opacity="0.4" text-anchor="middle">ถอนเงินได้ตามปกติ — ไม่กระทบต้นไม้ ไม่มีบทลงโทษ</text>
 
       <rect x="22" y="330" width="256" height="140" rx="14" fill="#FAFCFA"/>
       <text x="34" y="350" font-size="11.5" font-weight="600" fill="#16221B">ขอถอนจากนิรภัย</text>
@@ -181,7 +183,7 @@
   <text x="520" y="690" font-size="10" fill="#5C6B62" text-anchor="middle">ระบบไม่เดา ให้ผู้ใช้ยืนยันครั้งเดียว แล้วจำผู้ส่งไว้</text>
 
   <text x="870" y="672" font-size="12.5" font-weight="700" fill="#12241C" text-anchor="middle">3 · กระเป๋านิรภัย</text>
-  <text x="870" y="690" font-size="10" fill="#5C6B62" text-anchor="middle">ขอถอนแล้วรอ cooldown เห็นต้นไม้โตตามยอดสะสม</text>
+  <text x="870" y="690" font-size="10" fill="#5C6B62" text-anchor="middle">ขอถอนแล้วรอ cooldown ต้นไม้โตตาม streak ไม่ใช่ยอดเงิน</text>
 
   <!-- ================= ROW 2 : SUPPORTING SCREENS ================= -->
   <text x="520" y="724" font-size="14" font-weight="700" fill="#12241C" text-anchor="middle">หน้าจอที่เหลือ — spec ปิดครบแล้วใน design_usecase.md</text>
