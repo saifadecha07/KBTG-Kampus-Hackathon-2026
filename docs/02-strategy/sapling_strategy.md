@@ -493,7 +493,7 @@ Problem → Feature (auto-split = novelty claim, vault = ฟีเจอร์�
 - [x] ยืนยัน Track → **Track 1**
 - [x] ~~**ตัดสินชื่อทีมภาษาอังกฤษ**~~ **ตัดสินแล้ว: `Three.py`** → ตั้งชื่อไฟล์ `Three.py_1PagePitch.pdf` (≤1MB)
 - [x] ~~เช็ค/แทนที่ตัวเลข 84% / 52,000 บาท ที่ยังไม่มี source~~ **ปิดแล้ว** — แทนด้วย Deloitte 2025 (63%/64% เดือนชนเดือน), GASA/Nation Thailand (12,956 บาท/คน), JobsDB (25.6% ช่วง 15,001–30,000), SCB EIC (70%+ ไม่มีเงินสำรอง) ดู Problem Statement + References
-- [ ] **บีบเนื้อหาให้เหลือ 1 หน้าจริง** — ห้ามก็อปไฟล์นี้ไปตรงๆ (ยาวหลายหน้า) บีบเหลือหัวข้อละ 2–4 บรรทัด
+- [x] ~~**บีบเนื้อหาให้เหลือ 1 หน้าจริง**~~ **ทำแล้ว** — `docs/06-pitch/Three.py_1PagePitch.pdf` (PDF จริง 1 หน้า A4, ≤1MB, source แก้ได้ที่ `docs/06-pitch/pitch.html`)
 - [ ] **ใส่ slide เทียบของเดิมให้ครบ** — MAKE by KBank + **K PLUS Lock Account** + **Schedule Transfer** + ePocket/Qapital/Maybank พร้อมจุดต่าง (สำคัญมาก: 3 ตัวแรกเป็นของคนจัดแข่งเอง)
 - [ ] ใส่ 1 บรรทัดตีกรอบ scope anti-scam ไม่ over-claim
 - [ ] ปรับคำพิช: auto-split = "ไม่มีธนาคารไทยทำ" ไม่ใช่ "ไม่มีใครทำในโลก"
@@ -501,10 +501,10 @@ Problem → Feature (auto-split = novelty claim, vault = ฟีเจอร์�
 - [ ] **ใส่ incentive (ดอกเบี้ยเพดาน 50,000) ลงสไลด์** พร้อมป้ายว่าต้องผ่าน Business approval
 - [ ] **ใส่แผนทดสอบคุณภาพลงสไลด์ 2–3 บรรทัด** — unit/integration + usability 5–8 คน + PDPA (นี่คือ Track Perspective ของ Track 1 อย่าใส่แค่คำว่า "มีเทส")
 - [ ] **รัน pilot usability 1 คนก่อน แล้วค่อยรัน 5–8 คนจริง** — ถ้าไม่ทัน ให้เขียนในสไลด์ว่า "แผนทดสอบพร้อม ยังไม่ได้รัน" **ห้ามแต่งผล**
-- [ ] เช็คสไลด์ทั้งหน้ากับตาราง **Claims ที่ห้ามพูด** (section 3) ก่อนส่ง
+- [x] ~~เช็คสไลด์ทั้งหน้ากับตาราง **Claims ที่ห้ามพูด**~~ **เช็คแล้วกับ `Three.py_1PagePitch.pdf`** — ไม่มีข้อไหนหลุดจากตาราง 6 ข้อ (ไม่พูดเรื่องดอกเบี้ย/K Point เลยเพราะยังไม่อนุมัติ, ไม่พูดว่า Lock Account ไม่มี, ไม่พูดว่ากันโกงได้แบบไม่มีเงื่อนไข)
 - [ ] ให้คะแนนตัวเองตามตาราง **Readiness** ด้านล่าง แล้วแก้ช่องที่ได้ ≤2 ก่อน
 - [ ] ทำ prototype ขั้นต่ำ (flow diagram / clickable mockup) ไว้ demo
-- [ ] เขียน 1-Page Pitch จริงให้พอดี 1 หน้า ตาม 5 หัวข้อบังคับ
+- [x] ~~เขียน 1-Page Pitch จริงให้พอดี 1 หน้า ตาม 5 หัวข้อบังคับ~~ **ทำแล้ว** — `docs/06-pitch/Three.py_1PagePitch.pdf`
 
 ### 📊 Readiness — ให้คะแนนตัวเองก่อนกรรมการให้
 

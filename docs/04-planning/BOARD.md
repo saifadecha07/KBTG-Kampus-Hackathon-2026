@@ -132,12 +132,13 @@
 - [ ] ใส่ incentive (ดอกเบี้ยเพดาน 50,000) ลงสไลด์ พร้อมป้าย "ต้องผ่าน Business approval"
 - [ ] เตรียมคำตอบเรื่องต้นทุนฝั่งธนาคาร (ledger entry ไม่ใช่ธุรกรรมจริง · batch · เพดานดอกเบี้ย)
 - [ ] ทำ slide เทียบคู่แข่ง — **MAKE by KBank + Lock Account + Schedule Transfer สำคัญสุด** (ของคนจัดแข่งเอง)
-- [ ] ใส่แผนทดสอบคุณภาพลงสไลด์ 2–3 บรรทัด (unit/integration + usability + PDPA) — นี่คือ Track Perspective ของ Track 1
-- [ ] เช็คสไลด์กับตาราง **Claims ที่ห้ามพูด** ก่อนส่ง
+- [x] ~~ใส่แผนทดสอบคุณภาพลงสไลด์ 2–3 บรรทัด~~ **ทำแล้ว** — Track Perspective section ใน PDF มี Develop/Test/Ensure Quality ครบ (property test, unit/integration, usability, PDPA)
+- [x] ~~เช็คสไลด์กับตาราง **Claims ที่ห้ามพูด**~~ **เช็คแล้ว** — ไม่มีข้อไหนหลุด (ดูรายละเอียดใน `sapling_strategy.md` D-checklist)
 - [ ] ให้คะแนนตัวเองตามตาราง **Readiness** ใน `sapling_strategy.md` แล้วแก้ช่องที่ได้ ≤2
 - [ ] ทำ prototype / clickable mockup
-- [ ] เขียน 1-Page Pitch ให้พอดี 1 หน้า ตาม 5 หัวข้อบังคับ
-- [ ] ตั้งชื่อไฟล์ `Three.py_1PagePitch.pdf` (≤1MB) แล้วส่ง
+- [x] ~~เขียน 1-Page Pitch ให้พอดี 1 หน้า ตาม 5 หัวข้อบังคับ~~ **ทำแล้ว 17 ก.ย.** — `docs/06-pitch/Three.py_1PagePitch.pdf`
+- [x] ~~ตั้งชื่อไฟล์ `Three.py_1PagePitch.pdf` (≤1MB)~~ **ตั้งชื่อ/สร้างไฟล์แล้ว**
+- [ ] **อัปโหลดส่งจริงบนระบบ KBTG** (ขั้นตอนนอก repo ต้องทำเอง)
 
 ---
 
