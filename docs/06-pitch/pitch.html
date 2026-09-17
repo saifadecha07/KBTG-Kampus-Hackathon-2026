@@ -4,98 +4,127 @@
 <meta charset="UTF-8">
 <title>Sapling — 1-Page Pitch</title>
 <style>
-  @page { size: A4; margin: 12mm 15mm; }
+  @page { size: A4; margin: 0; }
   * { box-sizing: border-box; }
   html, body {
     margin: 0; padding: 0;
     font-family: "Segoe UI", "Noto Sans Thai", "Tahoma", sans-serif;
     color: #1B2420;
-    font-size: 10.8pt;
-    line-height: 1.44;
+    font-size: 10.3pt;
+    line-height: 1.42;
   }
-  .header {
+
+  .page { width: 210mm; min-height: 297mm; padding: 0 15mm 0 15mm; display: flex; flex-direction: column; }
+  .bottom { margin-top: auto; }
+  .closing {
+    background: linear-gradient(135deg, #0B5C43 0%, #0E7C5A 60%, #12A279 100%);
+    color: #EFFBF6;
+    margin: 10px -15mm 0 -15mm;
+    padding: 6mm 15mm;
+    font-size: 8.6pt;
+    text-align: center;
+  }
+  .closing b { color: #ffffff; }
+
+  /* ---- Header band ---- */
+  .hero {
+    background: linear-gradient(135deg, #0B5C43 0%, #0E7C5A 60%, #12A279 100%);
+    color: #ffffff;
+    margin: 0 -15mm 12px -15mm;
+    padding: 11mm 15mm 8mm 15mm;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 2.6px solid #0E7C5A;
-    padding-bottom: 7px;
-    margin-bottom: 12px;
   }
-  .header .title {
-    font-size: 27pt;
-    font-weight: 800;
-    color: #0E7C5A;
-    letter-spacing: 0.2px;
+  .hero .brand { display: flex; align-items: center; gap: 10px; }
+  .hero .mark {
+    width: 34px; height: 34px; flex: none;
   }
-  .header .tagline {
-    font-size: 10pt;
-    color: #4B564F;
-    margin-top: 3px;
-    max-width: 430px;
-  }
-  .header .meta {
-    text-align: right;
-    font-size: 9.5pt;
-    color: #4B564F;
-    line-height: 1.55;
-  }
-  .header .meta b { color: #1B2420; }
+  .hero .title { font-size: 26pt; font-weight: 800; letter-spacing: 0.3px; line-height: 1; }
+  .hero .tagline { font-size: 9.6pt; color: #D8F3E7; margin-top: 4px; max-width: 400px; }
+  .hero .meta { text-align: right; font-size: 9pt; color: #D8F3E7; line-height: 1.55; }
+  .hero .meta b { color: #ffffff; }
 
-  .grid {
+  /* ---- Stat strip ---- */
+  .stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 13px;
   }
-  .full { grid-column: 1 / -1; }
+  .stat {
+    background: #F2F8F5;
+    border: 1px solid #D8E8E0;
+    border-left: 3px solid #0E7C5A;
+    border-radius: 4px;
+    padding: 6px 8px;
+  }
+  .stat .num { font-size: 15pt; font-weight: 800; color: #0E7C5A; line-height: 1.05; }
+  .stat .lbl { font-size: 7.7pt; color: #33403A; margin-top: 2px; line-height: 1.3; }
+  .stat .src { font-size: 6.8pt; color: #7C8A82; margin-top: 2px; }
 
-  section { margin-bottom: 12px; }
   h2 {
-    font-size: 11.6pt;
-    color: #0E7C5A;
+    font-size: 12pt;
+    color: #0B5C43;
     margin: 0 0 5px 0;
-    padding-bottom: 2px;
-    border-bottom: 1.2px solid #CFE0D6;
-    text-transform: none;
+    display: flex; align-items: center; gap: 6px;
   }
-  p { margin: 0 0 5px 0; text-align: left; }
-  ul { margin: 2px 0 5px 0; padding-left: 15px; }
-  li { margin-bottom: 3px; }
-  .src { color: #5A6A5F; font-size: 9.3pt; }
-  .mech { margin: 2px 0 5px 0; padding-left: 0; list-style: none; }
-  .mech li {
-    margin-bottom: 6px;
-    padding-left: 16px;
-    position: relative;
-  }
-  .mech li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: #0E7C5A;
-    font-weight: 700;
-  }
-  .mech b { color: #12241C; }
+  h2 .icon { width: 15px; height: 15px; flex: none; }
+  section { margin-bottom: 12px; }
+  p { margin: 0 0 5px 0; }
 
-  .value-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
-  .value-cols h3 { font-size: 10.4pt; margin: 0 0 3px 0; color: #12241C; }
+  /* ---- Solution cards ---- */
+  .mech-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+  .mech-card {
+    background: #FAFCFB;
+    border: 1px solid #DCE8E1;
+    border-radius: 6px;
+    padding: 8px 9px;
+  }
+  .mech-card .mi { width: 20px; height: 20px; margin-bottom: 4px; }
+  .mech-card .mt { font-size: 10pt; font-weight: 700; color: #12241C; margin-bottom: 3px; }
+  .mech-card .md { font-size: 8.9pt; color: #33403A; line-height: 1.4; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+
+  .subtle { color: #5A6A5F; font-size: 8.3pt; }
+
+  /* ---- Value proposition ---- */
+  .value-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+  .vbox { background: #F2F8F5; border-radius: 6px; padding: 8px 10px; }
+  .vbox h3 { font-size: 9.8pt; margin: 0 0 4px 0; color: #0B5C43; }
+  .vbox p { font-size: 8.9pt; margin: 0; }
 
   .footer {
-    margin-top: 8px;
     padding-top: 6px;
     border-top: 1.2px solid #CFE0D6;
-    font-size: 8.4pt;
+    font-size: 7.6pt;
     color: #6B776F;
     display: flex;
     justify-content: space-between;
+    gap: 12px;
   }
+  .footer span:last-child { flex: none; white-space: nowrap; }
 </style>
 </head>
 <body>
+<div class="page">
 
-  <div class="header">
-    <div>
-      <div class="title">Sapling</div>
-      <div class="tagline">ระบบจัดสรรเงินอัตโนมัติบน K PLUS สำหรับ First Jobbers — แบ่งเงินอัตโนมัติตอนเงินเดือนเข้า กันบิลไว้ก่อน ออมแบบมีวินัย</div>
+  <div class="hero">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="23" stroke="#ffffff" stroke-width="2" opacity="0.55"/>
+        <path d="M24 34 V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M24 18 C24 12 18 10 14 12" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+        <path d="M24 23 C24 18 30 16 34 18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+        <circle cx="14" cy="12" r="2.4" fill="#ffffff"/>
+        <circle cx="34" cy="18" r="2.4" fill="#ffffff"/>
+        <circle cx="24" cy="35" r="2.6" fill="#ffffff"/>
+      </svg>
+      <div>
+        <div class="title">Sapling</div>
+        <div class="tagline">ระบบจัดสรรเงินอัตโนมัติบน K PLUS สำหรับ First Jobbers — กันบิลไว้ก่อน แบ่งเงินอัตโนมัติ ออมแบบมีวินัย</div>
+      </div>
     </div>
     <div class="meta">
       ทีม: <b>Three.py</b><br>
@@ -104,74 +133,107 @@
     </div>
   </div>
 
-  <div class="grid">
-
-    <section class="full">
-      <h2>Problem Statement</h2>
-      <p>
-        First Jobbers ไทยจำนวนมากบริหารเงินเดือนไม่ทัน และเป็นกลุ่มเสี่ยงสูงต่อการถูกหลอกลวงทางการเงิน:
-        Gen Z ไทย 63% และ Gen Y ไทย 64% ใช้เงินเดือนหมดพอดีทุกเดือน ไม่มีเหลือเก็บ สูงกว่าค่าเฉลี่ยโลกที่ 52%
-        <span class="src">(Deloitte Global 2025)</span> —
-        คนอายุ 21–30 เป็นกลุ่มเหยื่อหลักของ scam ในไทย ความเสียหายเฉลี่ย 12,956 บาท/คน
-        <span class="src">(GASA/Nation Thailand, พ.ย. 2025)</span> —
-        เงินเดือนแรกเข้าของบัณฑิตจบใหม่ 25.6% อยู่ในช่วง 15,001–30,000 บาท
-        <span class="src">(JobsDB)</span> สวนทางค่าครองชีพในเมือง และคนไทยกว่า 70% มีเงินสำรองฉุกเฉินไม่ถึง 3 เดือน
-        <span class="src">(SCB EIC Outlook Q2/2024)</span>
-      </p>
-    </section>
-
-    <section class="full">
-      <h2>Proposed Solution</h2>
-      <p>Sapling ต่อยอดจาก ePocket เดิมของ K PLUS ด้วย 3 กลไกที่ทำงานร่วมกัน:</p>
-      <ul class="mech">
-        <li><b>Auto-Split ตอนเงินเข้า</b> — เงินเดือนเข้า ระบบเด้งถามยืนยัน (ไม่เดาว่าก้อนไหนคือเงินเดือน) แล้วแบ่งเข้า 3 บัญชีอัตโนมัติ: กันเงินบิลที่หักอัตโนมัติไว้ก่อนเสมอ / นิรภัย / รายวัน — ติ๊ก "จำไว้" ครั้งแรกแล้วอัตโนมัติเต็มรูปแบบรอบถัดไป รองรับทั้งพนักงานประจำและฟรีแลนซ์ด้วยกลไกเดียวกัน</li>
-        <li><b>Daily Auto-Refill</b> — เติมกระเป๋าใช้จ่ายรายวันจากบัญชีเงินรายเดือนทุกเที่ยงคืนตามเป้าที่ตกลง ใช้เกินได้ไม่บล็อก แต่แจ้งเตือนพร้อมยอดคงเหลือบัญชีหลักแบบ real-time</li>
-        <li><b>กระเป๋านิรภัย (Vault)</b> — เงินออมถอนออกไม่ได้ทันที ต้องรอ cooldown (ตั้งครั้งเดียวตอนเปิดบัญชี) แล้วปล่อยเงินอัตโนมัติในแอป ไม่ต้องไปสาขา — ต่างจาก K PLUS Lock Account เดิมที่ล็อกทั้งบัญชีและต้องไปสาขาเพื่อปลด</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Target Users</h2>
-      <p>
-        ผู้ใช้ K PLUS อายุ 22–30 ปี กลุ่ม First Jobbers รายได้ปานกลาง–จำกัด
-        มีรายรับสม่ำเสมอ (พนักงานประจำหรือฟรีแลนซ์) แต่จัดสรรเงินเองไม่ทัน
-        โดยเฉพาะกลุ่มเช่าบ้าน/คอนโดในเมืองที่ค่าครองชีพสูงเทียบกับรายได้
-      </p>
-    </section>
-
-    <section>
-      <h2>Track Perspective — Track 1</h2>
-      <p>
-        <b>Develop:</b> rule engine แยก module ทดสอบง่าย · cooldown state authoritative ที่ server เท่านั้น · ledger เขียนอย่างเดียว 2 ขา
-      </p>
-      <p>
-        <b>Test:</b> Property test สุ่มธุรกรรม 10,000 รายการ ยืนยันผลรวมทุกกระเป๋าตรงเสมอไม่มีกระเป๋าติดลบ · unit/integration ครอบทุก edge case จากการไล่ตรวจ use case อย่างเป็นระบบ (53 จุด) · idempotency/concurrency test
-      </p>
-      <p>
-        <b>Ensure Quality:</b> usability test 5–8 คนตาม protocol ที่กำหนด task/เกณฑ์ตัดสินไว้ล่วงหน้า · PDPA checklist เพราะระบบเก็บข้อมูลเงินเดือนและพฤติกรรมใช้จ่าย
-      </p>
-    </section>
-
-    <section class="full">
-      <h2>Value Proposition</h2>
-      <div class="value-cols">
-        <div>
-          <h3>ผู้ใช้</h3>
-          <p>ไม่ต้องแบ่งเงินเอง เห็นเงินออมโตอัตโนมัติ มีเวลาคิดทบทวนก่อนใช้เงินก้อนออม (เคสถอนเงินเก็บไปโอนให้มิจฉาชีพ cooldown อาจช่วยได้ — ไม่ใช่ระบบตรวจจับ scam)</p>
-        </div>
-        <div>
-          <h3>K PLUS</h3>
-          <p>เพิ่ม engagement รายวัน ต่อยอดขาย product ออมทรัพย์จากพฤติกรรมผู้ใช้ จุดต่างชัดจาก MAKE Cloud Pocket และ K PLUS Lock Account เดิม — cooldown ปลดอัตโนมัติในแอประดับกระเป๋า ไม่ใช่ล็อกทั้งบัญชีที่ต้องไปสาขา</p>
-        </div>
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#0E7C5A" stroke-width="1.6"/><path d="M12 7v5l3.2 2" stroke="#0E7C5A" stroke-width="1.6" stroke-linecap="round"/></svg>
+      Problem Statement
+    </h2>
+    <p>First Jobbers ไทยจำนวนมากบริหารเงินเดือนไม่ทัน และเป็นกลุ่มเสี่ยงสูงต่อการถูกหลอกลวงทางการเงิน:</p>
+    <div class="stats">
+      <div class="stat">
+        <div class="num">63–64%</div>
+        <div class="lbl">Gen Z / Gen Y ไทย ใช้เงินเดือนหมดพอดีทุกเดือน (โลกเฉลี่ย 52%)</div>
+        <div class="src">Deloitte Global 2025</div>
       </div>
-    </section>
+      <div class="stat">
+        <div class="num">12,956 ฿</div>
+        <div class="lbl">ความเสียหายเฉลี่ยจาก scam ต่อคน อายุ 21–30 คือกลุ่มเหยื่อหลัก</div>
+        <div class="src">GASA / Nation Thailand 2025</div>
+      </div>
+      <div class="stat">
+        <div class="num">25.6%</div>
+        <div class="lbl">เงินเดือนแรกเข้าอยู่ช่วง 15,001–30,000 บาท สวนทางค่าครองชีพเมือง</div>
+        <div class="src">JobsDB Thailand</div>
+      </div>
+      <div class="stat">
+        <div class="num">70%+</div>
+        <div class="lbl">คนไทยมีเงินสำรองฉุกเฉินไม่ถึง 3 เดือน</div>
+        <div class="src">SCB EIC Q2/2024</div>
+      </div>
+    </div>
+  </section>
 
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="#0E7C5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Proposed Solution
+    </h2>
+    <p class="subtle">Sapling ต่อยอดจาก ePocket เดิมของ K PLUS ด้วย 3 กลไกที่ทำงานร่วมกัน — ไม่ต้องโยกเงินเอง:</p>
+    <div class="mech-row">
+      <div class="mech-card">
+        <svg class="mi" viewBox="0 0 24 24" fill="none"><path d="M12 3v7M12 10l-6 8M12 10l6 8" stroke="#0E7C5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="3" r="1.8" fill="#0E7C5A"/></svg>
+        <div class="mt">Auto-Split ตอนเงินเข้า</div>
+        <div class="md">เด้งถามยืนยัน (ไม่เดา) แล้วแบ่งเข้า 3 บัญชี: กันบิลไว้ก่อน / นิรภัย / รายวัน — จำผู้ส่งไว้ทำอัตโนมัติรอบหน้า รองรับทั้งประจำและฟรีแลนซ์</div>
+      </div>
+      <div class="mech-card">
+        <svg class="mi" viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="14" height="10" rx="2" stroke="#0E7C5A" stroke-width="1.6"/><rect x="19" y="10" width="2" height="4" rx="1" fill="#0E7C5A"/><path d="M8 12h6" stroke="#0E7C5A" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div class="mt">Daily Auto-Refill</div>
+        <div class="md">เติมกระเป๋าใช้จ่ายรายวันทุกเที่ยงคืนตามเป้า ใช้เกินได้ไม่บล็อก แต่แจ้งเตือนพร้อมยอดคงเหลือบัญชีหลักแบบ real-time</div>
+      </div>
+      <div class="mech-card">
+        <svg class="mi" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="9" rx="2" stroke="#0E7C5A" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#0E7C5A" stroke-width="1.6"/><circle cx="12" cy="14.5" r="1.4" fill="#0E7C5A"/></svg>
+        <div class="mt">กระเป๋านิรภัย (Vault)</div>
+        <div class="md">ถอนไม่ได้ทันที ต้องรอ cooldown แล้วปล่อยเงินอัตโนมัติในแอป — ต่างจาก Lock Account เดิมที่ล็อกทั้งบัญชีและต้องไปสาขา</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div>
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#0E7C5A" stroke-width="1.6"/><path d="M5 20c0-4 3.1-6.5 7-6.5s7 2.5 7 6.5" stroke="#0E7C5A" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Target Users
+      </h2>
+      <p>ผู้ใช้ K PLUS อายุ 22–30 ปี กลุ่ม First Jobbers รายได้ปานกลาง–จำกัด มีรายรับสม่ำเสมอ (พนักงานประจำหรือฟรีแลนซ์) แต่จัดสรรเงินเองไม่ทัน โดยเฉพาะกลุ่มเช่าบ้าน/คอนโดในเมืองที่ค่าครองชีพสูงเทียบกับรายได้</p>
+    </div>
+    <div>
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 19V9l8-5 8 5v10" stroke="#0E7C5A" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="#0E7C5A" stroke-width="1.6"/></svg>
+        Track Perspective — Track 1
+      </h2>
+      <p><b>Develop:</b> rule engine แยก module ทดสอบง่าย · cooldown state authoritative ที่ server เท่านั้น · ledger เขียนอย่างเดียว 2 ขา</p>
+      <p><b>Test:</b> property test สุ่ม 10,000 ธุรกรรม ยืนยัน invariant ทุกครั้ง · unit/integration ครอบทุก edge case (53 จุด) · idempotency/concurrency test</p>
+      <p><b>Ensure Quality:</b> usability test 5–8 คนตาม protocol ที่กำหนดไว้ล่วงหน้า · PDPA checklist</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>
+      <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.7 8.9 2.8 5 6.5 5c2 0 3.6 1.1 4.5 2.6 0-.1 0-.1 0 0 .9-1.5 2.5-2.6 4.5-2.6 3.7 0 5.8 3.9 4 7.5C19 16.65 12 21 12 21z" stroke="#0E7C5A" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      Value Proposition
+    </h2>
+    <div class="value-cols">
+      <div class="vbox">
+        <h3>ผู้ใช้</h3>
+        <p>ไม่ต้องแบ่งเงินเอง เห็นเงินออมโตอัตโนมัติ มีเวลาคิดทบทวนก่อนใช้เงินก้อนออม (เคสถอนเงินเก็บไปโอนให้มิจฉาชีพ cooldown อาจช่วยได้ — ไม่ใช่ระบบตรวจจับ scam)</p>
+      </div>
+      <div class="vbox">
+        <h3>K PLUS</h3>
+        <p>เพิ่ม engagement รายวัน ต่อยอดขาย product ออมทรัพย์จากพฤติกรรมผู้ใช้ จุดต่างชัดจาก MAKE Cloud Pocket และ Lock Account เดิม — cooldown ปลดอัตโนมัติในแอประดับกระเป๋า ไม่ต้องไปสาขา</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="bottom">
+    <div class="footer">
+      <span>ตัวเลขทุกตัวมี source อ้างอิงตรวจสอบได้ — รายละเอียดเต็มและ references: github.com/saifadecha07/KBTG-Kampus-Hackathon-2026</span>
+      <span>Three.py_1PagePitch.pdf</span>
+    </div>
+    <div class="closing">
+      <b>จุดต่างจากของเดิม:</b> cooldown ปลดอัตโนมัติในแอปหลังรอ (ไม่ใช่ปลดทันทีแบบ MAKE และไม่ต้องไปสาขาแบบ Lock Account) &nbsp;·&nbsp; daily auto-refill ข้ามกระเป๋าแบบ atomic ที่ไม่มีเจ้าไหนมี &nbsp;·&nbsp; รวมอยู่ใน K PLUS ที่ผู้ใช้ใช้อยู่แล้ว ไม่ใช่แอปแยก
+    </div>
   </div>
 
-  <div class="footer">
-    <span>ตัวเลขทุกตัวมี source อ้างอิงตรวจสอบได้ — รายละเอียดเต็มและ references: github.com/saifadecha07/KBTG-Kampus-Hackathon-2026</span>
-    <span>Three.py_1PagePitch.pdf</span>
-  </div>
-
+</div>
 </body>
 </html>
