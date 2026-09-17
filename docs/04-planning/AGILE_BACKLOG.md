@@ -1,6 +1,6 @@
-# Pace — Agile Backlog
+# Sapling — Agile Backlog
 
-> Backlog สำหรับนำงาน Pace เข้า GitHub Project/Issues โดยใช้สถานะ `Backlog` / `Ready` / `In Progress` / `Review` / `Done` / `Blocked`
+> Backlog สำหรับนำงาน Sapling เข้า GitHub Project/Issues โดยใช้สถานะ `Backlog` / `Ready` / `In Progress` / `Review` / `Done` / `Blocked`
 > แหล่งอ้างอิง business rule คือ [`../03-design/design_usecase.md`](../03-design/design_usecase.md) และ [`../03-design/decision_log.md`](../03-design/decision_log.md)
 >
 > อัปเดตล่าสุด: 2026-09-13
@@ -50,7 +50,7 @@
 | CORE-01 | P0 | Backlog | ในฐานะระบบ เราต้อง split เงินโดยรักษา invariant | split รวมยอดตรง, เศษเข้าบัญชีรายเดือน, ไม่มีกระเป๋าติดลบ, ledger สองขาใน transaction เดียว | ARC-02 |
 | CORE-02 | P0 | Backlog | ในฐานะระบบ เราต้องเติมกระเป๋าใช้จ่ายรายวันและ backfill ได้ถูกต้อง | เติมเฉพาะส่วนต่าง, carry-over ไม่หาย, backfill atomic, เงินรายเดือนหมดแล้วไม่ crash | CORE-01 |
 | CORE-03 | P0 | Backlog | ในฐานะระบบ เราต้องรองรับ idempotency และ concurrency | retry ไม่สร้างรายการซ้ำ, cron ซ้ำไม่เติมซ้ำ, row lock ลำดับคงที่, multi-device ไม่สร้าง request ซ้ำ | CORE-01 |
-| CORE-04 | P0 | Backlog | ในฐานะระบบ เราต้องรองรับ Fail-open ตอน Pace ล่ม | จ่าย/โอนจากบัญชีหลักต่อได้, หยุด split/backfill/vault withdrawal, บันทึก `outside_pace`, reconcile ภายหลัง | ARC-02 |
+| CORE-04 | P0 | Backlog | ในฐานะระบบ เราต้องรองรับ Fail-open ตอน Sapling ล่ม | จ่าย/โอนจากบัญชีหลักต่อได้, หยุด split/backfill/vault withdrawal, บันทึก `outside_pace`, reconcile ภายหลัง | ARC-02 |
 | CORE-05 | P1 | Backlog | ในฐานะระบบ เราต้องจัดการเงินตีกลับหลัง split | reverse เงินที่เหลือทุกกระเป๋าโดยไม่รอ cooldown, ไม่ทำให้ pocket ติดลบ, บันทึก `reversal_shortfall` เพื่อส่ง dispute ธนาคาร | CORE-01, ARC-02 |
 
 ### EPIC-03 — Bill Learner and Reservation

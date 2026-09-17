@@ -1,4 +1,4 @@
-# Board — Pace
+# Board — Sapling
 
 > อัปเดตล่าสุด: 2026-09-13
 
@@ -30,7 +30,7 @@
 - [x] เก็บข้อมูลปัญหาพร้อมแหล่งอ้างอิงจริง (scam ไทย, เงินเดือนแรกเข้า, job scam)
 
 ### ออกแบบไอเดีย
-- [x] สรุปแนวคิด Pace — auto-split + daily refill + กระเป๋านิรภัย
+- [x] สรุปแนวคิด Sapling — auto-split + daily refill + กระเป๋านิรภัย
 - [x] ล็อกโครงสร้างบัญชี 3 กระเป๋า (รายเดือน / รายวัน / นิรภัย) + กันเงินบิลในบัญชีหลัก
 - [x] เขียน logic การเติมกระเป๋ารายวันแบบละเอียด (top-up ส่วนต่าง · carry-over · backfill ตอนใช้เกิน)
 - [x] เขียน logic การหน่วงเงินกระเป๋านิรภัยแบบละเอียด (ขอถอน → cooldown → ปล่อยอัตโนมัติ)
@@ -48,7 +48,7 @@
 - [x] **K PLUS Lock Account** — ล็อกทั้งบัญชี ปลดที่สาขา (ยืนยันจาก 1Q25 MD&A หน้า 31) **ห้ามพูดว่า K PLUS ไม่มีฟีเจอร์ล็อกเงิน**
 - [x] **K PLUS Schedule Transfer / My Budget** — ตั้งโอนล่วงหน้าและทำงบมีอยู่แล้ว ต้องมีคำตอบว่า auto-split ต่างยังไง
 - [x] สรุปจุดต่างที่เหลือจริง 3 ข้อ (cooldown แบบปล่อยอัตโนมัติ · daily refill+backfill · อยู่ใน K PLUS)
-- [x] **เขียนตาราง "Claims ที่ห้ามพูด" + ขอบเขตหลักฐาน** ใน `pace_strategy.md` section 3
+- [x] **เขียนตาราง "Claims ที่ห้ามพูด" + ขอบเขตหลักฐาน** ใน `sapling_strategy.md` section 3
 
 ### ตัดสินใจที่ปิดแล้ว
 - [x] **สูตรเป้ารายวัน** — ระบบคำนวณแนะนำ → ผู้ใช้กดรับหรือแก้เอง → ล็อกคงที่ทั้งรอบ
@@ -65,12 +65,12 @@
 - [x] **L5 เกณฑ์เด้งถาม** — เงินเข้า ≥50% ของรายได้ + กฎเงินผ่านทาง (ก้อนใหญ่ที่โอนออก ≥80% ใน 24 ชม. = ไม่ใช่รายได้ จำผู้ส่งไว้ไม่เด้งซ้ำ)
 - [x] **L9 cold start** — อ่านบิลจากประวัติตั้งแต่ onboarding แล้วแบ่งยอดคงเหลือทันที เป้ารายวันคิดจากวันที่เหลือจริง **ห้ามกันบิลที่จ่ายไปแล้วซ้ำ**
 - [x] **A+3/B2 incentive** — ดอกเบี้ยพิเศษกระเป๋านิรภัย **เพดาน 50,000 บาทแรก** (≈ เงินสำรอง 2–3 เดือนของกลุ่มเป้าหมาย ธนาคารคุมต้นทุนได้ precedent คือ MAKE) · สำรอง = K Point · **ต้องติดป้ายว่าขึ้นกับ Business approval**
-- [x] **B3 security/privacy** — เขียนเช็คลิสต์ PDPA S1–S8 ใน `design_usecase.md` + สรุปในแผนทดสอบ `pace_strategy.md`
+- [x] **B3 security/privacy** — เขียนเช็คลิสต์ PDPA S1–S8 ใน `design_usecase.md` + สรุปในแผนทดสอบ `sapling_strategy.md`
 - [x] **กฎกัน alert fatigue** — เติมเงินรอบปกติไม่เด้ง · ใช้เกินเป้าเด้งครั้งแรกของวันครั้งเดียว · การเคลื่อนเงินนิรภัยเด้งครบทุกจุด
 - [x] **แผน usability test เต็มรูปแบบ** — task T1–T5 · rubric · severity · เกณฑ์ตัดสิน continue/revise/pivot · **ต้อง pilot 1 คนก่อนรัน 5–8 คน**
 - [x] **กฎเงินพื้นฐาน M1–M12** — integer สตางค์ห้าม float · ปัดลงแล้วเศษเข้าบัญชีรายเดือน · เป้ารายวันปัดลงเป็นบาทเต็ม · **invariant ผลรวมต้องตรงเสมอ** · ห้ามกระเป๋าติดลบ · ledger 2 ขาเขียนอย่างเดียว · transaction เดียวต่อชุด · **ปิด L7** (UTC เก็บ / Asia/Bangkok แสดง / นับตามเวลา commit) · **แยก `reserved` ออกจาก `balance`** · server เป็นแหล่งความจริงเดียว
 - [x] **ไล่ตรวจทุก UC หาช่องโหว่ที่ยังไม่เคยลิสต์ — เจอ 49 ข้อ (G01–G49)** พร้อมข้อเสนอทุกข้อ
-- [x] **Decision log รอบ 13 ก.ย.** — Fail-open ตอน Pace ล่ม · reversal เงินตีกลับ · Priority บิลโดยผู้ใช้ · bill grouping ต้องยืนยัน · บิลรอบไม่รายเดือนให้เลือกวิธีกันเอง (ค่าเริ่มต้นทยอยกัน) · แยกการปิดกระเป๋านิรภัย/ปิดบัญชีธนาคาร · Daily Target มีผลวันถัดไป · คิวเงินเข้าหลายก้อน · PoC ใช้ I1 · Data Model scope ใช้ J2
+- [x] **Decision log รอบ 13 ก.ย.** — Fail-open ตอน Sapling ล่ม · reversal เงินตีกลับ · Priority บิลโดยผู้ใช้ · bill grouping ต้องยืนยัน · บิลรอบไม่รายเดือนให้เลือกวิธีกันเอง (ค่าเริ่มต้นทยอยกัน) · แยกการปิดกระเป๋านิรภัย/ปิดบัญชีธนาคาร · Daily Target มีผลวันถัดไป · คิวเงินเข้าหลายก้อน · PoC ใช้ I1 · Data Model scope ใช้ J2
 - [x] **รอบตรวจสอบที่ 2 (13 ก.ย.) — เจอ interaction gap 4 จุด (R15–R18)** ระหว่าง R-series ใหม่กับ B/G/M-series เดิม: reversal ก่อนแบ่ง (R15) · บิลทยอยกันที่ `stopped` ต้องคืนยอดสะสมทั้งหมด (R16) · fail-open เสนอแบ่งเฉพาะยอดเหลือจริงหลังหัก outside_pace (R17) · escalation ต้องเรียง Priority ไม่ใช่ FIFO (R18) — ดู `decision_log.md` section 8
 - [x] **Warning register** — `underfunded` · `reversal_shortfall` · candidate bill ที่ยังไม่ยืนยัน · ช่องทาง ATM/บัตรนอก PoC · UI queue ค้าง · cooldown ต้อง read-only
 
@@ -128,13 +128,13 @@
 
 ### Pitch
 - [ ] **ตัดสินชื่อทีมภาษาอังกฤษ** *(บล็อกการตั้งชื่อไฟล์ส่ง)*
-- [x] ~~เช็ค/แทนที่ตัวเลข 84% และ 52,000 บาท ที่ยังไม่มีแหล่งอ้างอิง~~ **ปิดแล้ว 13 ก.ย.** — Deloitte 2025 (เดือนชนเดือน 63%/64%) · GASA/Nation Thailand (scam เฉลี่ย 12,956 บาท/คน) · JobsDB (เงินเดือนแรกเข้า 25.6%) · SCB EIC (เงินสำรองฉุกเฉิน 70%+) ดู `pace_strategy.md` Problem Statement
+- [x] ~~เช็ค/แทนที่ตัวเลข 84% และ 52,000 บาท ที่ยังไม่มีแหล่งอ้างอิง~~ **ปิดแล้ว 13 ก.ย.** — Deloitte 2025 (เดือนชนเดือน 63%/64%) · GASA/Nation Thailand (scam เฉลี่ย 12,956 บาท/คน) · JobsDB (เงินเดือนแรกเข้า 25.6%) · SCB EIC (เงินสำรองฉุกเฉิน 70%+) ดู `sapling_strategy.md` Problem Statement
 - [ ] ใส่ incentive (ดอกเบี้ยเพดาน 50,000) ลงสไลด์ พร้อมป้าย "ต้องผ่าน Business approval"
 - [ ] เตรียมคำตอบเรื่องต้นทุนฝั่งธนาคาร (ledger entry ไม่ใช่ธุรกรรมจริง · batch · เพดานดอกเบี้ย)
 - [ ] ทำ slide เทียบคู่แข่ง — **MAKE by KBank + Lock Account + Schedule Transfer สำคัญสุด** (ของคนจัดแข่งเอง)
 - [ ] ใส่แผนทดสอบคุณภาพลงสไลด์ 2–3 บรรทัด (unit/integration + usability + PDPA) — นี่คือ Track Perspective ของ Track 1
 - [ ] เช็คสไลด์กับตาราง **Claims ที่ห้ามพูด** ก่อนส่ง
-- [ ] ให้คะแนนตัวเองตามตาราง **Readiness** ใน `pace_strategy.md` แล้วแก้ช่องที่ได้ ≤2
+- [ ] ให้คะแนนตัวเองตามตาราง **Readiness** ใน `sapling_strategy.md` แล้วแก้ช่องที่ได้ ≤2
 - [ ] ทำ prototype / clickable mockup
 - [ ] เขียน 1-Page Pitch ให้พอดี 1 หน้า ตาม 5 หัวข้อบังคับ
 - [ ] ตั้งชื่อไฟล์ `ชื่อทีม_1PagePitch.pdf` (≤1MB) แล้วส่ง
@@ -145,4 +145,4 @@
 
 - [x] ~~วันส่ง 1-Page Pitch~~ **ปิดแล้ว 13 ก.ย.** — ภายใน 21 ก.ย. 2026 (ปิดรับ Applications) ดูตาราง "กำหนดการ" ด้านบน
 - [x] ~~วันแข่ง Pitching Day~~ **ปิดแล้ว 13 ก.ย.** — 7 พ.ย. 2026 (Final Slide Submission 30 ต.ค.)
-- [x] ~~จำนวนสมาชิกทีม + ใครทำอะไร~~ **ปิดแล้ว 13 ก.ย.** — 3 คน: Pornchanok Hongthong (Business Analyst — ฝั่ง business ของทั้งงาน) · Saifa Decha และ Wutthisak Boonkan (Software Engineer — sprint นี้ทำ logic และ algorithm design) — ดู README.md § ทีม; **แบ่งงาน logic/algorithm ระหว่าง Saifa กับ Wutthisak เป็นส่วนไหนบ้าง ยังไม่ระบุ** (B4 ใน `pace_strategy.md`)
+- [x] ~~จำนวนสมาชิกทีม + ใครทำอะไร~~ **ปิดแล้ว 13 ก.ย.** — 3 คน: Pornchanok Hongthong (Business Analyst — ฝั่ง business ของทั้งงาน) · Saifa Decha และ Wutthisak Boonkan (Software Engineer — sprint นี้ทำ logic และ algorithm design) — ดู README.md § ทีม; **แบ่งงาน logic/algorithm ระหว่าง Saifa กับ Wutthisak เป็นส่วนไหนบ้าง ยังไม่ระบุ** (B4 ใน `sapling_strategy.md`)
