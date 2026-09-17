@@ -7,6 +7,8 @@
 
 ## ทีม
 
+ชื่อทีม: **Three.py** — ใช้ตั้งชื่อไฟล์ส่ง `Three.py_1PagePitch.pdf`
+
 | ชื่อ | บทบาท | รับผิดชอบ |
 |---|---|---|
 | Pornchanok Hongthong | Business Analyst | ฝั่ง business ของทั้งงาน — problem statement, คู่แข่ง, value proposition, pitch |
