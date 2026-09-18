@@ -10,8 +10,8 @@
     margin: 0; padding: 0;
     font-family: "Segoe UI", "Noto Sans Thai", "Tahoma", sans-serif;
     color: #1B2420;
-    font-size: 10pt;
-    line-height: 1.38;
+    font-size: 9.6pt;
+    line-height: 1.32;
   }
 
   .page { width: 210mm; min-height: 297mm; padding: 0 15mm 0 15mm; display: flex; flex-direction: column; }
@@ -80,7 +80,7 @@
     display: flex; align-items: center; gap: 6px;
   }
   h2 .icon { width: 15px; height: 15px; flex: none; }
-  section { margin-bottom: 9px; }
+  section { margin-bottom: 7px; }
   p { margin: 0 0 5px 0; }
 
   /* ---- Solution cards ---- */
@@ -98,6 +98,22 @@
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
 
   .subtle { color: #5A6A5F; font-size: 8.3pt; }
+
+  .touch {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    background: #F2F8F5;
+    border: 1px dashed #B9D8C7;
+    border-radius: 6px;
+    padding: 5px 8px;
+    margin-top: 6px;
+    font-size: 8pt;
+    color: #33403A;
+    line-height: 1.3;
+  }
+  .touch svg { width: 14px; height: 14px; flex: none; margin-top: 1px; }
+  .touch b { color: #0B5C43; }
 
   /* ---- Value proposition ---- */
   .value-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
@@ -196,6 +212,10 @@
         <div class="md">เงินในกระเป๋านี้จะถอนออกไม่ได้ทันที ต้องรอผ่านช่วงเวลาที่กำหนดไว้ก่อน แล้วระบบจะปล่อยเงินให้อัตโนมัติ แนวคิดนี้อ้างอิงจากงานวิจัยด้าน commitment device (Ashraf, Karlan &amp; Yin, QJE 2006) ที่ยืนยันว่าผู้ใช้ยอมรับกลไกลักษณะนี้ได้จริงแม้ไม่มีผลตอบแทนพิเศษ</div>
       </div>
     </div>
+    <div class="touch">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 21v-9" stroke="#0E7C5A" stroke-width="1.6" stroke-linecap="round"/><path d="M12 12c0-4-4-6-7-5 0 4 3 6 7 5z" stroke="#0E7C5A" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 9c0-3.5 3-5.5 6-4.5 0 3.5-2.5 5.5-6 4.5z" stroke="#0E7C5A" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span><b>จุดเล็กๆ ที่ใส่ใจ:</b> หน้าจอนิรภัยมีต้นไม้ที่โตขึ้นทุกครั้งที่ออมต่อเนื่อง นับจากความสม่ำเสมอไม่ใช่ยอดเงิน คนเงินเดือนน้อยจึงโตได้เท่าคนเงินเดือนมาก และถอนเงินก็ไม่ทำให้ต้นไม้ตาย เป็นแรงจูงใจง่ายๆ ให้อยากกลับมาออมสม่ำเสมอ</span>
+    </div>
   </section>
 
   <section class="grid2">
@@ -211,9 +231,9 @@
         <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 19V9l8-5 8 5v10" stroke="#0E7C5A" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="#0E7C5A" stroke-width="1.6"/></svg>
         Track Perspective — Track 1
       </h2>
-      <p>ในด้านการพัฒนา ทีมออกแบบ rule engine ให้แยกเป็นโมดูลที่ทดสอบง่าย กำหนดให้สถานะของช่วงเวลารอถอนเงินต้องอ้างอิงจากเซิร์ฟเวอร์เท่านั้น และบันทึกทุกรายการผ่าน ledger ที่เขียนได้ทางเดียวเพื่อป้องกันข้อมูลผิดเพี้ยน</p>
-      <p>ในด้านการทดสอบ ทีมใช้ property test สุ่มธุรกรรมกว่าหมื่นรายการเพื่อยืนยันว่ายอดเงินในทุกบัญชีถูกต้องเสมอ ร่วมกับ unit และ integration test ที่ครอบคลุมกรณีย่อยกว่า 50 จุดที่สำรวจไว้ล่วงหน้า และทดสอบ idempotency กับ concurrency โดยเฉพาะ</p>
-      <p>ในด้านการรับประกันคุณภาพ ทีมวางแผนทดสอบการใช้งานจริงกับผู้ใช้ 5–8 คนตาม protocol ที่กำหนดไว้ล่วงหน้า พร้อมจัดทำ checklist ตามหลัก PDPA เพื่อดูแลข้อมูลส่วนบุคคล</p>
+      <p>ด้านการพัฒนา ออกแบบ rule engine แยกเป็นโมดูลที่ทดสอบง่าย ให้สถานะรอถอนเงินอ้างอิงจากเซิร์ฟเวอร์เท่านั้น และบันทึกทุกรายการผ่าน ledger ที่เขียนทางเดียวเพื่อกันข้อมูลผิดเพี้ยน</p>
+      <p>ด้านการทดสอบ ใช้ property test สุ่มธุรกรรมกว่าหมื่นรายการยืนยันว่ายอดเงินทุกบัญชีถูกต้องเสมอ ร่วมกับ unit และ integration test ครอบคลุมกรณีย่อยกว่า 50 จุด และทดสอบ idempotency กับ concurrency โดยเฉพาะ</p>
+      <p>ด้านการรับประกันคุณภาพ วางแผนทดสอบการใช้งานจริงกับผู้ใช้ 5–8 คนตาม protocol ที่กำหนดไว้ล่วงหน้า พร้อม checklist ตามหลัก PDPA</p>
     </div>
   </section>
 
