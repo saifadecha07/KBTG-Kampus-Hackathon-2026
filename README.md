@@ -166,4 +166,5 @@ Logic ทางการเงินและ business rule ปิดครบ�
 | [`docs/05-prototype/flow.svg`](docs/05-prototype/flow.svg) | ภาพ concept mockup 3 หน้าจอ (แสดงในหัวข้อ Demo Concept ด้านบนแล้ว) |
 | [`docs/05-prototype/logic-flows.svg`](docs/05-prototype/logic-flows.svg) | Logic flow diagram ของ 3 กลไกหลัก (แสดงด้านบนแล้ว) |
 | [`docs/06-pitch/Three.py_1PagePitch.pdf`](docs/06-pitch/Three.py_1PagePitch.pdf) | **1-Page Pitch ที่ใช้ส่งจริง** (PDF, 1 หน้า A4, ≤1MB) — แก้เนื้อหาได้ที่ source `docs/06-pitch/pitch.html` |
+| [`docs/06-pitch/Three.py_1PagePitch.pptx`](docs/06-pitch/Three.py_1PagePitch.pptx) | เวอร์ชัน PowerPoint ของหน้าเดียวกัน — ใช้อัปโหลดเข้า Canva เพื่อแก้ไขต่อ (ตัวหนังสือเป็น text object จริง ไม่ใช่ font ที่ subset มาจาก PDF จึงไม่เพี้ยนตอน import) |
 | [`archive/CLUADE.md`](archive/CLUADE.md) | บันทึกบริบทเดิม เก็บไว้อ้างอิงเท่านั้น |
