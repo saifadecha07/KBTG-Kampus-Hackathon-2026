@@ -146,4 +146,4 @@
 
 - [x] ~~วันส่ง 1-Page Pitch~~ **ปิดแล้ว 13 ก.ย.** — ภายใน 21 ก.ย. 2026 (ปิดรับ Applications) ดูตาราง "กำหนดการ" ด้านบน
 - [x] ~~วันแข่ง Pitching Day~~ **ปิดแล้ว 13 ก.ย.** — 7 พ.ย. 2026 (Final Slide Submission 30 ต.ค.)
-- [x] ~~จำนวนสมาชิกทีม + ใครทำอะไร~~ **ปิดแล้ว 13 ก.ย.** — 3 คน: Pornchanok Hongthong (Business Analyst — ฝั่ง business ของทั้งงาน) · Saifa Decha และ Wutthisak Boonkan (Software Engineer — sprint นี้ทำ logic และ algorithm design) — ดู README.md § ทีม; **แบ่งงาน logic/algorithm ระหว่าง Saifa กับ Wutthisak เป็นส่วนไหนบ้าง ยังไม่ระบุ** (B4 ใน `sapling_strategy.md`)
+- [x] ~~จำนวนสมาชิกทีม + ใครทำอะไร~~ **ปิดแล้ว 13 ก.ย. (อัปเดต 19 ก.ย. เพิ่มสมาชิก)** — 4 คน: Pornchanok Hongthong (Business Analyst — ฝั่ง business ของทั้งงาน) · Saifa Decha และ Wutthisak Boonkan (Software Engineer — sprint นี้ทำ logic และ algorithm design) · Kunthida Manvaja (Software Engineer — Pitching: story, solution และการนำเสนอ) — ดู README.md § ทีม; **แบ่งงาน logic/algorithm ระหว่าง Saifa กับ Wutthisak เป็นส่วนไหนบ้าง ยังไม่ระบุ** (B4 ใน `sapling_strategy.md`)

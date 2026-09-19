@@ -129,4 +129,4 @@
 - `ARC-04`: ต้องออกแบบ demo time model
 - `BILL-05`: business rule ปิดแล้ว แต่ต้องทำ reminder engine ตาม `ESCALATION_LEAD_DAYS`
 - **Deadline จริง: 1-Page Pitch ต้องส่งภายใน 21 ก.ย. 2026 (ปิดรับ Applications) — เหลือไม่กี่วัน** ดูตาราง `BOARD.md` § กำหนดการ; Final Slide Submission 30 ต.ค., Pitching Day 7 พ.ย. 2026
-- ทีม 3 คน: Pornchanok Hongthong (Business Analyst — ฝั่ง business ของทั้งงาน) · Saifa Decha และ Wutthisak Boonkan (Software Engineer — sprint นี้ทำ logic/algorithm design) — owner ของแต่ละ story ในตารางด้านบนยังไม่ระบุ
+- ทีม 4 คน: Pornchanok Hongthong (Business Analyst — ฝั่ง business ของทั้งงาน) · Saifa Decha และ Wutthisak Boonkan (Software Engineer — sprint นี้ทำ logic/algorithm design) · Kunthida Manvaja (Software Engineer — Pitching: story, solution และการนำเสนอ) — owner ของแต่ละ story ในตารางด้านบนยังไม่ระบุ

@@ -14,6 +14,7 @@
 | Pornchanok Hongthong | Business Analyst | ฝั่ง business ของทั้งงาน — problem statement, คู่แข่ง, value proposition, pitch |
 | Saifa Decha | Software Engineer | Sprint นี้: logic และ algorithm design |
 | Wutthisak Boonkan | Software Engineer | Sprint นี้: logic และ algorithm design |
+| Kunthida Manvaja | Software Engineer | Pitching — เล่า story, อธิบาย solution และนำเสนอบนเวที |
 
 ---
 
