@@ -41,7 +41,7 @@
     background: linear-gradient(135deg, #0B5C43 0%, #0E7C5A 60%, #12A279 100%);
     color: #ffffff;
     margin: 0 -15mm 9px -15mm;
-    padding: 9mm 15mm 6mm 15mm;
+    padding: 7.5mm 15mm 5mm 15mm;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -99,6 +99,26 @@
 
   .subtle { color: #5A6A5F; font-size: 8.3pt; }
 
+  .flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 0 0 7px 0;
+  }
+  .flow .step {
+    flex: 1;
+    background: #F2F8F5;
+    border: 1px solid #CFE3D8;
+    border-radius: 6px;
+    padding: 4px 7px;
+    font-size: 8pt;
+    line-height: 1.3;
+    color: #33403A;
+  }
+  .flow .step b { display: block; font-size: 9.2pt; color: #0B5C43; }
+  .flow .arrow { flex: none; width: 14px; align-self: center; text-align: center; color: #0E7C5A; font-weight: 800; font-size: 10pt; }
+  .flow-cap { font-size: 7.8pt; color: #5A6A5F; margin: 0 0 3px 0; }
+
   .touch {
     display: flex;
     align-items: flex-start;
@@ -149,7 +169,7 @@
       </svg>
       <div>
         <div class="title">Sapling</div>
-        <div class="tagline">ระบบจัดสรรเงินอัตโนมัติบน K PLUS สำหรับ First Jobbers — กันบิลไว้ก่อน แบ่งเงินอัตโนมัติ ออมแบบมีวินัย</div>
+        <div class="tagline">ระบบบน K PLUS สำหรับ First Jobbers — แบ่งเงินเดือนให้ใช้ได้ทีละวัน กันบิลไว้ก่อน ออมแบบมีวินัย</div>
       </div>
     </div>
     <div class="meta">
@@ -194,22 +214,32 @@
       <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M14 6l6 6-6 6" stroke="#0E7C5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Proposed Solution
     </h2>
-    <p class="subtle">Sapling ต่อยอดจาก ePocket ที่ K PLUS มีอยู่แล้ว โดยจัดเงินเป็นกระเป๋า 3 ใบ คือ เงินรายเดือน ใช้จ่ายรายวัน และนิรภัย ผ่านกลไก 3 ส่วนที่ทำงานร่วมกันโดยผู้ใช้ไม่ต้องโยกเงินเอง</p>
+    <p class="subtle">หัวใจของ Sapling คือแบ่งเงินเดือนก้อนเดียวให้ใช้ได้ทีละวัน บน ePocket เดิมของ K PLUS ผ่านกระเป๋า 3 ใบ: เงินรายเดือน ใช้จ่ายรายวัน นิรภัย</p>
+    <div class="flow-cap">ตัวอย่างพนักงานเงินเดือน 22,500 บาท (ยังไม่นับเงินที่กันไว้จ่ายบิล)</div>
+    <div class="flow">
+      <div class="step"><b>เงินเดือนเข้า 22,500 ฿</b>ระบบถามยืนยันก่อนแบ่ง</div>
+      <div class="arrow">&rarr;</div>
+      <div class="step"><b>นิรภัย 4,500 ฿</b>บัญชีเงินรายเดือน 18,000 ฿</div>
+      <div class="arrow">&rarr;</div>
+      <div class="step"><b>เป้ารายวัน 600 ฿</b>18,000 &divide; 30 วัน ผู้ใช้กดรับหรือแก้เองได้</div>
+      <div class="arrow">&rarr;</div>
+      <div class="step"><b>เติมทุกเที่ยงคืน</b>กระเป๋ารายวันถูกเติมให้ถึง 600 ฿ จากบัญชีรายเดือน</div>
+    </div>
     <div class="mech-row">
       <div class="mech-card">
         <svg class="mi" viewBox="0 0 24 24" fill="none"><path d="M12 3v7M12 10l-6 8M12 10l6 8" stroke="#0E7C5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="3" r="1.8" fill="#0E7C5A"/></svg>
         <div class="mt">Auto-Split ตอนเงินเข้า</div>
-        <div class="md">เมื่อเงินเดือนเข้าบัญชี ระบบจะถามผู้ใช้ก่อนเสมอว่าต้องการแบ่งเงินตามแผนหรือไม่ แล้วกันเงินสำหรับบิลอัตโนมัติไว้ก่อน แบ่งส่วนออมเข้ากระเป๋านิรภัย และเก็บที่เหลือไว้ในบัญชีเงินรายเดือน หากตั้งให้จดจำผู้ส่ง รอบถัดไปจะทำงานอัตโนมัติทันที ใช้ได้ทั้งพนักงานประจำและฟรีแลนซ์ที่รายได้เข้าไม่ตรงงวด</div>
+        <div class="md">เมื่อเงินเดือนเข้า ระบบถามยืนยันก่อนเสมอ แล้วกันเงินสำหรับบิลไว้ก่อน แบ่งส่วนออมเข้ากระเป๋านิรภัย และเก็บที่เหลือไว้ในบัญชีเงินรายเดือน หากตั้งให้จดจำผู้ส่ง รอบถัดไปทำงานอัตโนมัติทันที ใช้ได้ทั้งพนักงานประจำและฟรีแลนซ์ที่รายได้เข้าไม่ตรงงวด</div>
       </div>
       <div class="mech-card">
         <svg class="mi" viewBox="0 0 24 24" fill="none"><rect x="4" y="7" width="14" height="10" rx="2" stroke="#0E7C5A" stroke-width="1.6"/><rect x="19" y="10" width="2" height="4" rx="1" fill="#0E7C5A"/><path d="M8 12h6" stroke="#0E7C5A" stroke-width="1.6" stroke-linecap="round"/></svg>
         <div class="mt">Daily Auto-Refill</div>
-        <div class="md">ทุกเที่ยงคืน ระบบจะเติมกระเป๋าใช้จ่ายรายวันให้ครบตามเป้าที่ตั้งไว้ โดยดึงจากบัญชีเงินรายเดือน หากใช้เกินเป้าในวันนั้น ระบบจะไม่ปิดกั้นการใช้จ่าย แต่ดึงส่วนที่ขาดจากบัญชีเงินรายเดือนมาเติมให้ทันที พร้อมแจ้งเตือนยอดคงเหลือ</div>
+        <div class="md">ระบบคำนวณเป้ารายวันจากยอดบัญชีเงินรายเดือนหารด้วยจำนวนวันถึงรอบเงินเข้าถัดไป แล้วเติมกระเป๋ารายวันให้ครบตามเป้าทุกเที่ยงคืน หากใช้เกินเป้า ระบบไม่ปิดกั้น แต่ดึงส่วนที่ขาดจากบัญชีรายเดือนมาเติมทันทีพร้อมแจ้งเตือน</div>
       </div>
       <div class="mech-card">
         <svg class="mi" viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="9" rx="2" stroke="#0E7C5A" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="#0E7C5A" stroke-width="1.6"/><circle cx="12" cy="14.5" r="1.4" fill="#0E7C5A"/></svg>
         <div class="mt">กระเป๋านิรภัย (Vault)</div>
-        <div class="md">เงินในกระเป๋านี้จะถอนออกไม่ได้ทันที ต้องรอผ่านช่วงเวลาที่กำหนดไว้ก่อน แล้วระบบจะปล่อยเงินให้อัตโนมัติ แนวคิดนี้อ้างอิงจากงานวิจัยด้าน commitment device (Ashraf, Karlan &amp; Yin, QJE 2006) ที่ยืนยันว่าผู้ใช้ยอมรับกลไกลักษณะนี้ได้จริงแม้ไม่มีผลตอบแทนพิเศษ</div>
+        <div class="md">เงินในกระเป๋านี้ถอนออกไม่ได้ทันที ต้องรอผ่านช่วงเวลาที่กำหนด แล้วระบบปล่อยเงินให้อัตโนมัติ อ้างอิงงานวิจัย commitment device (Ashraf, Karlan &amp; Yin, QJE 2006) ที่พบว่าคนยอมรับกลไกนี้ได้จริงแม้ไม่มีผลตอบแทนพิเศษ</div>
       </div>
     </div>
     <div class="touch">
@@ -231,9 +261,9 @@
         <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 19V9l8-5 8 5v10" stroke="#0E7C5A" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="#0E7C5A" stroke-width="1.6"/></svg>
         Track Perspective — Track 1
       </h2>
-      <p>ด้านการพัฒนา ออกแบบ rule engine แยกเป็นโมดูลที่ทดสอบง่าย ให้สถานะรอถอนเงินอ้างอิงจากเซิร์ฟเวอร์เท่านั้น และบันทึกทุกรายการผ่าน ledger ที่เขียนทางเดียวเพื่อกันข้อมูลผิดเพี้ยน</p>
-      <p>ด้านการทดสอบ ใช้ property test สุ่มธุรกรรมกว่าหมื่นรายการยืนยันว่ายอดเงินทุกบัญชีถูกต้องเสมอ ร่วมกับ unit และ integration test ครอบคลุมกรณีย่อยกว่า 50 จุด และทดสอบ idempotency กับ concurrency โดยเฉพาะ</p>
-      <p>ด้านการรับประกันคุณภาพ วางแผนทดสอบการใช้งานจริงกับผู้ใช้ 5–8 คนตาม protocol ที่กำหนดไว้ล่วงหน้า พร้อม checklist ตามหลัก PDPA</p>
+      <p>ด้านการพัฒนา แยก rule engine เป็นโมดูลที่ทดสอบง่าย ให้สถานะรอถอนเงินอ้างอิงจากเซิร์ฟเวอร์เท่านั้น และบันทึกทุกรายการผ่าน ledger ที่เขียนทางเดียว</p>
+      <p>ด้านการทดสอบ ใช้ property test สุ่มธุรกรรมกว่าหมื่นรายการยืนยันว่ายอดเงินทุกบัญชีถูกต้องเสมอ ร่วมกับ unit และ integration test ครอบคลุมกรณีย่อยกว่า 50 จุด รวมถึง idempotency และ concurrency</p>
+      <p>ด้านคุณภาพ วางแผนทดสอบกับผู้ใช้จริง 5–8 คนตาม protocol ที่กำหนดล่วงหน้า พร้อม checklist ตามหลัก PDPA</p>
     </div>
   </section>
 
